@@ -1,0 +1,2 @@
+BlockEvents.rightClicked('cataclysm:altar_of_fire', e => antiLoser(e, 'cataclysm:burning_ashes', 'alexsmobs:bear_dust', 3, 'cataclysm:kill_ignis'))
+BlockEvents.rightClicked('cataclysm:altar_of_abyss', e => antiLoser(e, 'cataclysm:abyssal_sacrifice', 'alexsmobs:bear_dust', 3, 'cataclysm:kill_leviathan'))

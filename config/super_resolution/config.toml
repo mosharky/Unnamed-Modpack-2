@@ -1,0 +1,36 @@
+inject_post_chain_blacklist = []
+capture_mode = "A"
+upscale_ratio = 1.7
+upscale_algo = "sgsr2"
+disable_upscale_on_vanilla = false
+compat_shader_compiler = false
+sharpness = 0.55
+force_disable_shader_compat = false
+enable_upscale = true
+pause_game_on_gui = false
+internal_texture_format = "R11B11G10F"
+
+[debug]
+	skip_init_vulkan = true
+	enable_render_doc = false
+	enable_debug = false
+	enable_imgui = false
+	debug_dump_shader = false
+	enable_detailed_profiling = false
+
+	[special.sgsr2]
+		variant = "CS_2"
+
+	[special.fsr1]
+		fp16 = true
+
+	[special.fsr2]
+		version = "V233"
+		fp16 = true
+
+[experiment]
+	generate_motion_vectors = false
+
+[dataset]
+	dataset_path = "msrDataset"
+	enable_dataset_generator = false

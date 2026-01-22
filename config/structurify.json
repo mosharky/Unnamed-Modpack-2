@@ -1,0 +1,40 @@
+{
+  "config_version": "2.0.12",
+  "config_datetime": "2026-01-22_02-38-37",
+  "general": {
+    "disable_all_structures": false,
+    "prevent_structure_overlap": true,
+    "enable_global_spacing_and_separation_modifier": false,
+    "global_spacing_and_separation_modifier": 1.0
+  },
+  "structure_namespaces": [
+    {
+      "name": "alexscaves",
+      "is_disabled": false,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false
+    },
+    {
+      "name": "global",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "min_distance_from_world_center": 500,
+      "max_distance_from_world_center": 0,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": true,
+      "flatness_check_allow_non_solid_blocks": false
+    }
+  ],
+  "structures": [
+    {
+      "name": "snowyspirit:gingerbread_house",
+      "is_disabled": true,
+      "whitelisted_biomes": [],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin"
+    }
+  ],
+  "structure_sets": []
+}

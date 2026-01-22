@@ -1,0 +1,120 @@
+// priority: -1
+
+Platform.setModName('kubejs', 'Momo Did This')
+// Platform.setModName('generikb', 'Momo Did This')
+Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
+// Platform.setModName('cataclysm', 'Cataclysm')
+// Platform.setModName('vanillabackport', 'Minecraft')
+// Platform.setModName('createarmory', 'Create: Armory')
+// Platform.setModName('raccompat', 'Relics: Alex\'s Caves')
+// Platform.setModName('ramcompat', 'Relics: Alex\'s Mobs')
+
+function postInit() {
+    constructWoodTypes()
+
+    // Adding items to global.REMOVALS and global swaps
+    removals_Core()
+    // removals_AlexsCaves()
+    // removals_AlexsMobs()
+    removals_Atmospheric()
+    removals_Autumnity()
+    removals_BerryGood()
+    // removals_Cataclysm()
+    // removals_CavernsAndChasms()
+    // removals_CollectorsReap()
+    removals_CreateDeco()
+    removals_CreatePowerLoader()
+    removals_Darkerdepths()
+    removals_DecorativeBlocks()
+    // removals_Embers()
+    // removals_EndRem()
+    removals_Environmental()
+    removals_FarmersDelight()
+    removals_Galosphere()
+    // removals_Goety()
+    // removals_ImmersiveWeathering()
+    removals_Incubation()
+    removals_Malum()
+    // removals_MoreMinecarts()
+    // removals_MowziesMobs()
+    removals_NaturesSpirit()
+    removals_Neapolitan()
+    removals_Oreganized()
+    // removals_Quark()
+    // removals_Railways()
+    // removals_Relics()
+    // removals_ScGuns()
+    removals_SnowySpirit()
+    // removals_UnusualPrehistory()
+    removals_UpgradeAquatic()
+    // removals_Windswept()
+    removals_Woodworks()
+    // removals_EvenBetterNether()
+
+    // Changing blockswap config with KubeJS!
+    // processBlockswapConfig()
+    // Virtual blockwsap (without using the blockswap mod)
+    processSwappers()
+
+    // Because not all KubeJS methods support regex
+    if (global.DEBUG_MODE) console.log('Processing RegExp removals..')
+    global.REMOVALS.all.forEach(entry => {
+        if (entry instanceof RegExp) {
+            Ingredient.of(entry).itemIds.forEach(match => {
+                if (global.DEBUG_MODE) console.log(`${entry} has matched: ${match}`)
+                global.REMOVALS.add(match)
+            })
+            global.REMOVALS.all.delete(entry)
+        }
+    })
+
+    if (global.DEBUG_MODE) {
+        console.log('Processed RegExp removals!')
+        console.log('Final removals set:')
+        console.log(global.REMOVALS.getAsArray())
+
+        let configObj = {
+            removals: global.REMOVALS.getAsArray(),
+            item_swapper: {},
+            block_swapper: {},
+            entity_swapper: {},
+            structure_swapper: {},
+            state_swapper: global.STATE_SWAPPER
+        }
+        // Convert maps to objects
+        global.ITEM_SWAPPER.forEach((value, key) => configObj.item_swapper[key] = value)
+        global.BLOCK_SWAPPER.forEach((value, key) => configObj.block_swapper[key] = value)
+        global.ENTITY_SWAPPER.forEach((value, key) => configObj.entity_swapper[key] = value)
+        global.STRUCTURE_BLOCK_SWAPPER.forEach((value, key) => {
+            configObj.structure_swapper[key] = {}
+            value.forEach((v, k) => {
+                configObj.structure_swapper[key][k] = v
+            })
+        })
+        // JsonIO.write('kubejs/config/swaps.json', configObj)
+    }
+}
+
+// For reloading
+if (global.INITIALIZED) postInit()
+
+// postInit because Ingredient needs to wait for mods to load in order to hold anything other than vanilla items
+StartupEvents.postInit(e => {
+    postInit()
+    // portals()
+    global.INITIALIZED = true
+})
+
+
+ItemEvents.modification(e => {
+    itemModification_Core(e)
+    // itemModification_AlexsCaves(e)
+    // itemModification_AlexsMobs(e)
+    itemModification_Atmospheric(e)
+    itemModification_BerryGood(e)
+    // itemModification_CollectorsReap(e)
+    itemModification_Incubation(e)
+    itemModification_Neapolitan(e)
+    // itemModification_Respiteful(e)
+    // itemModification_UnusualEnd(e)
+})

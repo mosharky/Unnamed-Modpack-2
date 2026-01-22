@@ -1,0 +1,21 @@
+function removals_MoreMinecarts() {
+    global.REMOVALS.add([
+        'moreminecarts:minecart_with_chunk_loader',
+        'moreminecarts:chunk_loader',
+        'moreminecarts:tank_cart',
+        'moreminecarts:transport_tank',
+        'moreminecarts:coupler',
+        'moreminecarts:chunkrodite',
+        'moreminecarts:chunkrodite_block',
+        'moreminecarts:glass_cactus',
+        'moreminecarts:levitation_powder',
+        'moreminecarts:holo_scaffold_generator',
+        'moreminecarts:holo_remote',
+        'moreminecarts:backwards_holo_remote',
+        'moreminecarts:simple_holo_remote',
+        'moreminecarts:broken_holo_remote',
+        'moreminecarts:glass_spines',
+        'moreminecarts:hard_light_lens',
+        /moreminecarts:.*organic_glass.*/,
+    ])
+}

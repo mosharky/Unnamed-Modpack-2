@@ -1,0 +1,100 @@
+{
+  "_hash": "19563614e6c11af2",
+  "itemSlotEnabled": true,
+  "itemGrabbingEnabled": true,
+  "creativeTabsEnabled": true,
+  "enchantmentsEnabled": true,
+  "stonecutterRecipesEnabled": true,
+  "bookEditEnabled": true,
+  "loomPatternsEnabled": true,
+  "advancementTabsEnabled": true,
+  "worldIconEnabled": true,
+  "serverIconEnabled": true,
+  "remapCursorsEnabled": true,
+  "inactiveWidgetsEnabled": true,
+  "aggressiveCursor": false,
+  "virtualMode": false,
+  "blacklist": [],
+  "global": {
+    "scaleActive": false,
+    "xhotActive": false,
+    "yhotActive": false,
+    "scale": 1.0,
+    "xhot": 0,
+    "yhot": 0
+  },
+  "settings": {
+    "default": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 1,
+      "yhot": 1
+    },
+    "pointer": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 10,
+      "yhot": 1
+    },
+    "text": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 7,
+      "yhot": 13
+    },
+    "grabbing": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 13,
+      "yhot": 16
+    },
+    "busy": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 13,
+      "yhot": 14
+    },
+    "shift": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 10,
+      "yhot": 1
+    },
+    "crosshair": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 13,
+      "yhot": 13
+    },
+    "resize_ew": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 15,
+      "yhot": 9
+    },
+    "resize_ns": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 7,
+      "yhot": 14
+    },
+    "resize_nwse": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 10,
+      "yhot": 10
+    },
+    "resize_nesw": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 10,
+      "yhot": 10
+    },
+    "not_allowed": {
+      "enabled": true,
+      "scale": 1.0,
+      "xhot": 13,
+      "yhot": 13
+    }
+  }
+}

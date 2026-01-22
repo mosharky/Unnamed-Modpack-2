@@ -1,0 +1,11 @@
+{
+    "filter": {
+        "type": "or",
+        "filters": [
+            "mod@malum"
+        ]
+    },
+    "flags": {
+        "disable": true
+    }
+}
