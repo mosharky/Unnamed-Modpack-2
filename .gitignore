@@ -17,6 +17,7 @@ config/asyncparticles/asyncparticles-mixin.properties
 config/packetfixer.properties
 config/structurify/*backup*
 kubejs/config/probe-settings.json
+kubejs/config/web_server.json
 config/oculus.properties
 config/ftbqoptimizer.snbt
 config/ftbxmodcompat.snbt
