@@ -47,7 +47,7 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_Neapolitan(e)
     biomeTags_UpgradeAquatic(e)
     // biomeTags_Windswept(e)
-    // biomeTags_BountifulFares(e)
+    biomeTags_BountifulFares(e)
 })
 
 
