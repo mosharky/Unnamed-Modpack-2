@@ -1,4 +1,5 @@
 # config 
+config/*.bak
 config/jei/world/
 config/blockswap/known_states/
 config/voicechat/username-cache.json
@@ -21,6 +22,7 @@ config/ftbqoptimizer.snbt
 config/ftbxmodcompat.snbt
 config/xaerominimap_entities.json
 config/ironchests/defaults.properties
+config/iris.properties
 
 # mods
 mods/.connector/
