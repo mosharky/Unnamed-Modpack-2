@@ -30,7 +30,7 @@
 	#allow fallen trees to generate in the overworld
 	fallen_trees = true
 	#allow leaf litter to generate in the overworld
-	leaf_litter = true
+	leaf_litter = false
 	#allow variants for pigs, cows and chickens to generate
 	farm_animal_variants = true
 	#allow wolfs to have variants for their sounds
