@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_Atmospheric(e) {
 
     // Disable Aspen Parkland biome

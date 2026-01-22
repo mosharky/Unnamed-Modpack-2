@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function moonlightTrades_Supplementaries(e) {
     e.json('supplementaries:moonlight/villager_trade/red_merchant/blue_bomb', {
         'neoforge:conditions': [{ flag: 'bomb', type: 'supplementaries:flag' }],

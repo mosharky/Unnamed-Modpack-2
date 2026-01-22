@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_Everycomp(e) {
     // Fixing NS maple hedges since we swapped out the NS logs for Autumnity logs
     e.shaped('everycomp:q/natures_spirit/red_maple_hedge',

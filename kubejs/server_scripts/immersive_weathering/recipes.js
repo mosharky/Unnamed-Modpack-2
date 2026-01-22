@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_ImmersiveWeathering(e) {
     e.shaped(Item.of('immersive_weathering:plate_iron', 64),
         ['AA', 'AA'],

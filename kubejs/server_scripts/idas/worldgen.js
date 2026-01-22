@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_Idas(e) {
     // Replace all mentions of quark:wraith
     const idasSpawners = [

@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function enchants_CallOfYucutan(e) {
     e.json('immersiveenchanting:enchantment_costs/call_of_yucutan/toxic_blade', {
         levels: {

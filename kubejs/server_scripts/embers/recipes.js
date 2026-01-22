@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_Embers(e) {
     e.remove({ id: /embers:.*plate_hammering/ })
     e.remove({ id: 'embers:lead_adhesive' })

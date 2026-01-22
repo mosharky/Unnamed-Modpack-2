@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_Supplementaries(e) {
     e.remove('supplementaries:rope')
 

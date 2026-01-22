@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_Environmental(e) {
     // Disable Marsh and Pine biome
     e.json('environmental:blueprint/modded_biome_slices/marsh', disableBiomeSliceJson)

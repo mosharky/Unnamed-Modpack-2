@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_Neapolitan(e) {
     e.remove({id: 'collectorsreap:food/chocolate_arils'})
 

@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_ImmersiveWeathering(e) {
     removeBiomeModifier(e, 'immersive_weathering:has_loam')
     removeBiomeModifier(e, 'immersive_weathering:has_dune_grass')

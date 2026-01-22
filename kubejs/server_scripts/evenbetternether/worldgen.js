@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_EvenBetterNether(e) {
     removeBiomeModifier(e, 'evenbetternether:dense_lava_floe_patch_biome_modifier')
     removeBiomeModifier(e, 'evenbetternether:sparse_lava_floe_patch_biome_modifier')

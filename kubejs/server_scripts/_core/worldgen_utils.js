@@ -79,7 +79,7 @@ function nameProcess(input) {
 
 /**
  * Stops a placed feature from generating
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String | Array.<String>} features - The placed feature ID string or array of ID strings
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
  * @param {String} step - The generation step
@@ -101,7 +101,7 @@ function removeFeatures(event, features, biomes, step, id) {
 
 /**
  * Adds placed features to biomes
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String | Array.<String>} features - The placed feature ID string or array of ID strings
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
  * @param {String} step - The generation step
@@ -122,7 +122,7 @@ function addFeatures(event, features, biomes, step, id) {
 
 /**
  * Copies a placed feature JSON from kubejs/_mod_data
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String} modId - Which mods' jar this feature is found in
  * @param {String} featureType - 'placed' or 'configured'
  * @param {String} featureId - Feature ID (i.e.: 'minecraft:oak_tree)
@@ -136,7 +136,7 @@ function copyPasteFeature(event, modId, featureType, featureId) {
 
 /**
  * Registers a feature in location featureId
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String} type - CONFIGURED or PLACED
  * @param {String} featureId - Feature ID (i.e. `minecraft:oak_tree`)
  * @param {Object} featureJson - Feature JSON object
@@ -150,7 +150,7 @@ function registerFeature(event, type, featureId, featureJson) {
 
 /**
  * Remove a forge biome modifier
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String} modifier - mod id + modifier name (ex: 'eidolon:silver_ore')
  */
 function removeBiomeModifier(event, modifier) {
@@ -162,7 +162,7 @@ function removeBiomeModifier(event, modifier) {
 
 /**
  * Remove entity spawns from biomes
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String | Array.<String>} mobs - An entity ID, or entity type tag, or an array of entities
  * @param {String | Array.<String>} biomes - A biome ID, or biome tag, or an array of biomes
  * @param {Optional | String} id - Modifier ID
@@ -215,7 +215,7 @@ function wouldSurvive(plant) {
 
 /**
  * Create a configured and placed feature
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String} blockId - The block ID to generate patches of
  * @param {Number} tries - Number of attempts to place the patch
  * @param {Number} xzSpread 

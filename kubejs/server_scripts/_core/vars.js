@@ -1,6 +1,14 @@
 // priority: 100
 
+// Events for jsdoc IntelliSense
+// Base KJS
 /** @import {$TagKubeEvent} from "dev.latvian.mods.kubejs.server.tag.TagKubeEvent" */
+/** @import {$RecipesKubeEvent} from "dev.latvian.mods.kubejs.recipe.RecipesKubeEvent" */
+/** @import {$KubeDataGenerator} from "dev.latvian.mods.kubejs.generator.KubeDataGenerator" */
+// LootJS
+/** @import {$LootModificationEvent} from "com.almostreliable.lootjs.loot.LootModificationEvent" */
+/** @import {$LootModifier$Builder} from "com.almostreliable.lootjs.loot.modifier.LootModifier$Builder" */
+// MoreJS
 
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 
@@ -88,7 +96,7 @@ function antiLoser(e, activationItem, sound, minPlayers, advancement) {
 }
 
 
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function autoImmersiveEnchanting(e, enchantment, levels) {
     const modId = enchantment.split(':')[0]
     const enchantmentId = enchantment.split(':')[1]

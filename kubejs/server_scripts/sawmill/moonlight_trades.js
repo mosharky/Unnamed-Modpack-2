@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function moonlightTrades_Sawmill(e) {
     const biomeWoods = {
         'minecraft:plains': ['oak', 'birch'],

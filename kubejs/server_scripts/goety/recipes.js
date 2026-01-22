@@ -1,4 +1,4 @@
-/**@param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e  */
+/**@param {$RecipesKubeEvent} e  */
 function recipes_Goety(e) {
     e.replaceInput({}, 'goety:jade_tiles', 'call_of_yucutan:jade_tiles')
 

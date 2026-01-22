@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_Windswept(e) {
     // Disable icicles
     removeBiomeModifier(e, 'windswept:add_feature/icicles')

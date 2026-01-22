@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_ScGuns(e) {
     e.remove({ type: 'scguns:macerating' })
     e.remove({ type: 'scguns:powered_macerating' })

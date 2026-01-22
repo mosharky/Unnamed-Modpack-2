@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function numismaticTrades_Core(e) {
     const wanderingTraderJson = {
         profession: 'wandering_trader', trades: {

@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_Core(e) {
     e.replaceInput({ not: { id: 'woodworks:trapped_chest' } }, 'minecraft:chest', '#c:chests/wooden')
 

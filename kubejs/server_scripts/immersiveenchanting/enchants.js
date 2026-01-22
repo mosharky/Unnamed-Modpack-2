@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function enchants_ImmersiveEnchanting(e) {
     e.json('immersiveenchanting:enchantment_costs/lapis_cost', { item: 'minecraft:lapis_lazuli', amount: 3 })
 

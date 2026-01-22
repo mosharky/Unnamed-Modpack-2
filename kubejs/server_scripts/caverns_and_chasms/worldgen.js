@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_CavernsAndChasms(e) {
     // Replace silver ore with galopsphere's silver ore
     const ore_silver = getFeatureJson('caverns_and_chasms', CONFIGURED, 'caverns_and_chasms:ore_silver')

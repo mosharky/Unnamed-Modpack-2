@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_Embers(e) {
     removeBiomeModifier(e, 'embers:add_lead_ore')
     removeBiomeModifier(e, 'embers:add_silver_ore')

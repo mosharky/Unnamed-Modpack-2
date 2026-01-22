@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} e */
+/** @param {$RecipesKubeEvent} e */
 function recipes_FarmersDelight(e) {
     e.replaceInput({}, 'farmersdelight:wheat_dough', '#c:dough')
     e.replaceInput({}, 'farmersdelight:rope', 'supplementaries:rope')

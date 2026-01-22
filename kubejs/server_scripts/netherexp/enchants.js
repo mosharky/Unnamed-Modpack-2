@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function enchants_NetherExp(e) {
     e.json('immersiveenchanting:enchantment_costs/netherexp/phantasm_hull', {
         levels: {

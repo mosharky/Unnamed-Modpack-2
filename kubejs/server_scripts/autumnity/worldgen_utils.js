@@ -3,7 +3,7 @@
 /**
  * - Requires Autumnity (source: https://github.dev/team-abnormals/autumnity/tree/1.20.x/src/generated/resources/data/autumnity)
  * - Get a spotted placed feature JSON object
- * @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String} featureId - ID of the configured feature to be placed
  * @returns {String} Placed feature ID
  */

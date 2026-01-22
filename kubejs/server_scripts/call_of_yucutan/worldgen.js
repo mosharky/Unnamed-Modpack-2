@@ -1,4 +1,4 @@
-/** @param {import("dev.latvian.mods.kubejs.generator.KubeDataGenerator").$KubeDataGenerator$$Original} e  */
+/** @param {$KubeDataGenerator} e  */
 function worldgen_CallOfYucutan(e) {
     removeBiomeModifier(e, 'call_of_yucutan:jade_ore_biome_modifier')
     removeBiomeModifier(e, 'call_of_yucutan:deepslate_jade_ore_biome_modifier')
