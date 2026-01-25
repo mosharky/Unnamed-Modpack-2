@@ -4,6 +4,8 @@ function removals_Atmospheric() {
         /atmospheric:.*aspen.*/,
         // /atmospheric:.*leaf_pile.*/,
         /atmospheric:.*travertine.*/,
+        'atmospheric:orange',
+        'atmospheric:blood_orange',
     ])
 
     global.STRUCTURE_BLOCK_SWAPPER.set(/atmospheric:arid_garden.*/, new Map([

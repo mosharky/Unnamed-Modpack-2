@@ -1,6 +1,7 @@
 // priority: -1
 ItemEvents.modifyTooltips(e => {
     global.REMOVALS.getAsArray().forEach(removal => {
+        console.log(removal)
         e.add(removal, Text.red('DISABLED. Report to momo if you obtained this.').append(Text.darkGray('\nThis item is supposed to be replaced; ignore if found in a menu').italic()))
     })
 })

@@ -53,7 +53,6 @@ function blockTags_Core(e) {
 function entityTags_Core(e) {
     // e.add('kubejs:surface_mod_entities', /.*surface:.*/)
     e.add('c:bosses', [
-        '#c:bosses',
         'alexscaves:tremorzilla',
         'alexscaves:hullbreaker',
         'alexscaves:luxtructosaurus',
@@ -61,7 +60,6 @@ function entityTags_Core(e) {
         'alexscaves:forsaken',
         'alexsmobs:void_worm',
     ])
-    e.add('c:bosses', '#c:bosses')
 }
 
 

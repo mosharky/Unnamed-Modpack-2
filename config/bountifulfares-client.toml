@@ -5,7 +5,7 @@ restoration_overlay = true
 #Status Effects modified by Acidity have visual effects
 acidified_effect_icon_effects = true
 #Foods have effect tooltips
-effect_tooltips = true
+effect_tooltips = false
 #Show food inside Shulker Tiffins in the corner of the slot
 tiffin_corner_food_icon = false
 #Show food inside Shulker Tiffins in players' hands

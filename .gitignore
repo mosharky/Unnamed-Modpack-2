@@ -24,6 +24,12 @@ config/ftbxmodcompat.snbt
 config/xaerominimap_entities.json
 config/ironchests/defaults.properties
 config/iris.properties
+config/minecraft-cursor.json
+config/flywheel-client.toml
+config/c2me.toml
+config/minecraft-cursor.json
+config/c2me.toml
+config/flywheel-client.toml
 
 # mods
 mods/.connector/

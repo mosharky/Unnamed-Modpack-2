@@ -37,4 +37,12 @@ ClientEvents.lang('en_us', e => {
     // rename('moreminecarts:maglev_hologram_rail', 'Maglev Holograph Rail')
     // rename('moreminecarts:wooden_hologram_rail', 'Wooden Holograph Rail')
     // rename('moreminecarts:hologram_rail', 'Holograph Rail')
+
+    // Bountiful Fares
+    rename('bountifulfares:plum_log', 'Fruitful Plum Log')
+    rename('bountifulfares:plum_wood', 'Fruitful Plum Wood')
+    rename('bountifulfares:stripped_plum_log', 'Stripped Fruitful Plum Log')
+    rename('bountifulfares:stripped_plum_wood', 'Stripped Fruitful Plum Wood')
+    rename('bountifulfares:plum_leaves', 'Fruitful Plum Leaves')
+    rename('bountifulfares:plum_sapling', 'Fruitful Plum Sapling')
 })

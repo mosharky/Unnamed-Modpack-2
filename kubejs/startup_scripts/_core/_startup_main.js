@@ -50,6 +50,7 @@ function postInit() {
     // removals_Windswept()
     removals_Woodworks()
     // removals_EvenBetterNether()
+    removals_BountifulFares()
 
     // Changing blockswap config with KubeJS!
     // processBlockswapConfig()

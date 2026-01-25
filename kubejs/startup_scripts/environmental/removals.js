@@ -9,6 +9,7 @@ function removals_Environmental() {
         // /environmental:.*leaf_pile.*/,
         'environmental:bluebell',
         // /environmental:grass_thatch.*/,
+        'environmental:plum'
     ])
 
     // global.STRUCTURE_BLOCK_SWAPPER.set('environmental:log_cabin', new Map([

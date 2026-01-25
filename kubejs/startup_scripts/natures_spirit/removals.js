@@ -5,7 +5,9 @@ function removals_NaturesSpirit() {
         /natures_spirit:.*pink_sand.*/,
         /natures_spirit:.*maple(?!_leaves|_sapling).*/,
         /natures_spirit:chert.*ore/,
-        /natures_spirit:.*chalk.*/
+        /natures_spirit:.*chalk.*/,
+        'natures_spirit:coconut_half',
+        'natures_spirit:coconut_shell',
     ])
 
 

@@ -73,6 +73,8 @@ ServerEvents.recipes(e => {
     recipes_Supplementaries(e)
     // recipes_Windswept(e)
     recipes_Woodworks(e)
+    recipes_BountifulFares(e)
+    recipes_NaturesSpirit(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.all.forEach(removal => {
@@ -143,6 +145,7 @@ LootJS.modifiers(e => {
     lootReplacements_Core(all)
     // lootReplacements_ImmersiveEnchanting(all)
     lootRemovals_EndRem(all)
+    lootRemovals_Environmental(all)
 
     lootTables_Core(e)
     // lootTables_EndRem(e)
