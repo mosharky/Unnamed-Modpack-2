@@ -57,19 +57,19 @@ function constructWoodTypes() {
             switch (mod) {
                 case 'minecraft': {
                     // Vanilla backport case
+                    suppSquaredCompatId         = 'suppsquared:'
+                    supplementariesCompatId     = 'supplementaries:'
+                    snowySpiritCompatId         = 'snowyspirit:'
                     if (woodType != 'pale_oak') {
-                        woodworksCompatId             = 'woodworks:'
-                        quarkCompatId                 = 'quark:'
-                        verticalSlabCompatId          = 'quark:'
-                        createCompatId                = 'create:'
-                        farmersDelightCompatId        = 'farmersdelight:'
-                        suppSquaredCompatId           = 'suppsquared:'
-                        supplementariesCompatId       = 'supplementaries:'
-                        immersiveWeatheringCompatId   = 'immersive_weathering:'
-                        snowySpiritCompatId           = 'snowyspirit:'
-                        anotherFurnitureCompatId      = 'another_furniture:'
-                        backpackedCompatId            = 'backpacked:'
-                        backpackedCompatId            = 'decorative_blocks:'
+                        woodworksCompatId           = 'woodworks:'
+                        quarkCompatId               = 'quark:'
+                        verticalSlabCompatId        = 'quark:'
+                        createCompatId              = 'create:'
+                        farmersDelightCompatId      = 'farmersdelight:'
+                        immersiveWeatheringCompatId = 'immersive_weathering:'
+                        anotherFurnitureCompatId    = 'another_furniture:'
+                        backpackedCompatId          = 'backpacked:'
+                        decorativeBlocksCompatId    = 'decorative_blocks:'
                     }
                     break
                 }
@@ -85,7 +85,7 @@ function constructWoodTypes() {
                 }
                 case 'windswept': {
                     woodworksCompatId = mod + ':'
-                    farmersDelightCompatId = 'windswept_delights' + ':'
+                    farmersDelightCompatId = 'windswept_delights:'
                     break
                 }
                 case 'darkerdepths': {
@@ -100,6 +100,10 @@ function constructWoodTypes() {
                 case 'collectorsreap': {
                     farmersDelightCompatId = mod + ':'
                     woodworksCompatId = mod + ':'
+                    break
+                }
+                case 'natures_spirit': {
+                    farmersDelightCompatId = 'natures_delight:'
                     break
                 }
             }
@@ -148,7 +152,7 @@ function constructWoodTypes() {
                     cabinet:                farmersDelightCompatId + woodType + '_cabinet',
                 },
                 supplementaries: {
-                    sign_post:              supplementariesCompatId + 'sign_post_' + woodType,
+                    sign_post:              supplementariesCompatId + 'way_sign_' + woodType,
                     item_shelf:             suppSquaredCompatId + 'item_shelf_' + woodType,
                 },
                 // immersive_weathering: {
@@ -241,7 +245,7 @@ function constructWoodTypes() {
                 for (const [entryName, entryId] of Object.entries(entries)) {
                     if (entryId != undefined && !Item.exists(entryId)) {
                         if (global.DEBUG_MODE && woodTypesToConstruct[mod][woodType]) {
-                            console.warn(`DOESN'T EXIST: ${entryName}: ${entryId}`)
+                            console.warn(`    DOESN'T EXIST: ${entryName}: "${entryId}"`)
                         }
                         
                         woodTypeObj[entrySetMod][entryName] = undefined
@@ -257,7 +261,7 @@ function constructWoodTypes() {
                 global.REMOVALS.add(woodTypeObj)
             }
 
-            if (global.DEBUG_MODE) console.log(`Constructed ${mod}:${woodType}`)
+            if (global.DEBUG_MODE) console.log(`    Constructed "${mod}:${woodType}"`)
         })
     })
     if (global.DEBUG_MODE) console.log('Finished constructing wood types!')

@@ -143,6 +143,11 @@ function copyPasteFeature(event, modId, featureType, featureId) {
  * @returns {String} Returns featureId
  */
 function registerFeature(event, type, featureId, featureJson) {
+    if (type != CONFIGURED && type != PLACED) {
+        console.error(`Incorrect feature type "${type}" for feature: "${featureId}"`)
+        console.log(featureJson)
+        return
+    }
     let replaceIdSplit = featureId.split(':')
     event.json(`${replaceIdSplit[0]}:worldgen/${type}_feature/${replaceIdSplit[1]}`, featureJson)
     return featureId
@@ -281,7 +286,7 @@ function configuredFoliagePatch(e, blockId, tries, xzSpread, ySpread, rarity, st
 
 
 /**
- * @param {*} event - generateData event
+ * @param {$KubeDataGenerator} event - generateData event
  * @param {String} block - The block ID to register a cliff for
  * @param {Number} count 
  * @param {Number} xzMin 
@@ -295,11 +300,10 @@ function configuredFoliagePatch(e, blockId, tries, xzSpread, ySpread, rarity, st
  * @returns {String} - The placed feature ID
  */
 function registerCliff(event, block, count, xzMin, xzMax, yMin, yMax, toReplaceAt0, toReplace, placedWeird, id) {
-    const idString = block.replace(':', '_')
+    let featureId = `kubejs:${block.replace(':', '_')}_cliff`
+    if (id != undefined) featureId = id
 
-    if (id == undefined) id = `kubejs:${idString}_cliff`
-
-    registerFeature(event, CONFIGURED, id, {
+    registerFeature(event, CONFIGURED, featureId, {
         type: 'minecraft:random_selector',
         config: {
             features: [],
@@ -378,7 +382,7 @@ function registerCliff(event, block, count, xzMin, xzMax, yMin, yMax, toReplaceA
     })
 
     const placedJson = {
-        feature: id,
+        feature: featureId,
         placement: [
             { type: 'minecraft:count', count: 256 },
             { type: 'minecraft:in_square' },
@@ -399,8 +403,7 @@ function registerCliff(event, block, count, xzMin, xzMax, yMin, yMax, toReplaceA
             max_inclusive: 0
         }
     }
-    registerFeature(event, PLACED, id, placedJson)
+    registerFeature(event, PLACED, featureId, placedJson)
 
-
-    return `kubejs:${idString}_cliff`
+    return featureId
 }

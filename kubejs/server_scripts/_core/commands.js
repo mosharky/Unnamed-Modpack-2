@@ -5,11 +5,11 @@ ServerEvents.commandRegistry(event => {
     event.register(Commands.literal('fr')
         .requires(src => src.hasPermission(3))
         .executes(ctx => {
-            let server = ctx.source.getServer()
-            server.runCommandSilent('kubejs reload startup-scripts')
-            server.runCommandSilent('kubejs reload client-scripts')
-            server.runCommandSilent('kubejs reload lang')
-            server.runCommand('reload')
+            const player = ctx.source.getPlayer()
+            player.runCommandSilent('kubejs reload startup-scripts')
+            player.runCommandSilent('kubejs reload client-scripts')
+            player.runCommandSilent('kubejs reload lang')
+            player.runCommand('reload')
             return 1
         })
     )

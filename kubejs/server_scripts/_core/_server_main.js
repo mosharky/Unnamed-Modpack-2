@@ -50,6 +50,10 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_BountifulFares(e)
 })
 
+ServerEvents.tags('worldgen/structure', e => {
+    structureTags_Core(e)
+})
+
 
 ServerEvents.recipes(e => {
     recipes_Core(e)
@@ -75,6 +79,7 @@ ServerEvents.recipes(e => {
     recipes_Woodworks(e)
     recipes_BountifulFares(e)
     recipes_NaturesSpirit(e)
+    recipes_Create(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.all.forEach(removal => {
@@ -137,6 +142,8 @@ ServerEvents.generateData('after_mods', e => {
     // worldgen_ScGuns(e)
     worldgen_FarmersDelight(e)
     worldgen_BountifulFares(e)
+
+    structures_Core(e)
 })
 
 LootJS.modifiers(e => {

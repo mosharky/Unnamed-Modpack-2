@@ -23,7 +23,9 @@ function biomeTags_BountifulFares(e) {
 
     e.removeAll('bountifulfares:has_lemon_trees')
     e.add('bountifulfares:has_lemon_trees', [
-        'climaterivers:lukewarm_river'
+        'climaterivers:lukewarm_river',
+        'natures_spirit:tropical_basin',
+        'atmospheric:rainforest_basin',
     ])
 
     e.add('bountifulfares:has_orange_trees', [
@@ -47,10 +49,9 @@ function biomeTags_BountifulFares(e) {
     e.add('bountifulfares:has_plum_trees', [
         'natures_spirit:wisteria_forest',
         'natures_spirit:floral_ridges',
-        'environmental:blossom_woods',
-        'environmental:blossom_valleys',
         'natures_spirit:sugi_forest',
         'natures_spirit:blooming_sugi_forest',
+        'natures_spirit:flowering_shrubland',
     ])
 
     e.add('bountifulfares:has_walnut_trees', [
@@ -59,12 +60,9 @@ function biomeTags_BountifulFares(e) {
         'natures_spirit:coniferous_covert',
         'natures_spirit:woody_highlands',
         'natures_spirit:shrubby_highlands',
-        'natures_spirit:alpine_clearings',
-        'natures_spirit:alpine_highlands',
         'environmental:pine_barrens',
         'environmental:old_growth_pine_barrens',
         'environmental:blossom_woods',
-        'environmental:blossom_valleys'
     ])
 
 
@@ -248,10 +246,6 @@ function biomeTags_BountifulFares(e) {
     e.add('bountifulfares:has_wild_passion_fruit', [
         '#natures_spirit:is_tropical_woods',
         '#atmospheric:is_rainforest',
-        'natures_spirit:arid_savanna',
-        'natures_spirit:chaparral',
-        'atmospheric:scrubland',
-        'atmospheric:spiny_thicket'
     ])
 
     e.add('bountifulfares:has_tea_shrub', [
@@ -316,12 +310,24 @@ function biomeTags_BountifulFares(e) {
         'environmental:blossom_valleys',
     ])
 
+    e.removeAll('bountifulfares:has_grassy_dirt_patches')
     e.add('bountifulfares:has_grassy_dirt_patches', [
-        '#natures_spirit:is_alpine'
+        '#minecraft:is_taiga',
+        '#natures_spirit:is_alpine',
+        '#natures_spirit:is_autumn',
+        '#natures_spirit:is_frontier',
+        '#environmental:is_pine_barrens',
+        'atmospheric:laurel_forest',
+        'atmospheric:spiny_thicket',
     ])
 
+    e.removeAll('bountifulfares:has_grassy_dirt')
     e.add('bountifulfares:has_grassy_dirt', [
+        '#minecraft:is_taiga',
         '#natures_spirit:is_alpine',
-        '#natures_spirit:is_autumn'
+        '#natures_spirit:is_autumn',
+        '#environmental:is_pine_barrens',
+        'atmospheric:laurel_forest',
+        'atmospheric:spiny_thicket',
     ])
 }

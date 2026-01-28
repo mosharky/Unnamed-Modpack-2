@@ -29,4 +29,43 @@ function worldgen_Environmental(e) {
     addFeatures(e, copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_red_lotus'), '#kubejs:has_feature/environmental_flower_red_lotus', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'environmental', PLACED, 'environmental:flower_white_lotus'), '#kubejs:has_feature/environmental_flower_white_lotus', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'environmental', PLACED, 'environmental:patch_giant_tall_grass_marsh'), '#kubejs:has_feature/environmental_giant_tall_grass_marsh', VEGETAL_DECORATION)
+
+
+    // Adding Bountiful Fares' plum fruit to environmental trees
+    const plumTrees = [
+        'environmental:cheerful_plum',
+        'environmental:cheerful_plum_bees_005',
+        'environmental:cheerful_plum_bees_0002',
+        'environmental:moody_plum',
+        'environmental:moody_plum_bees_005',
+        'environmental:moody_plum_bees_0002',
+    ].forEach(tree => {
+        const treeJson = getFeatureJson('environmental', CONFIGURED, tree)
+        treeJson.config.decorators.push({
+            type: 'minecraft:attached_to_leaves',
+            block_provider: {
+                type: 'minecraft:randomized_int_state_provider',
+                property: 'age',
+                source: {
+                    type: 'minecraft:simple_state_provider',
+                    state: {
+                        Name: 'bountifulfares:hanging_plum',
+                        Properties: { age: '4' }
+                    }
+                },
+                values: {
+                    type: 'minecraft:uniform',
+                    max_inclusive: 4,
+                    min_inclusive: 0
+                }
+            },
+            directions: ['down'],
+            exclusion_radius_xz: 1,
+            exclusion_radius_y: 0,
+            probability: 0.2,
+            required_empty_blocks: 1
+        })
+
+        registerFeature(e, CONFIGURED, tree, treeJson)
+    })
 }

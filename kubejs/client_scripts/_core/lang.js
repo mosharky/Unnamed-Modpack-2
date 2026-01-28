@@ -4,9 +4,12 @@ ClientEvents.lang('en_us', e => {
         else e.renameItem(id, name)
     }
 
-    // Rope unification
-    rename('farmersdelight:rope', 'Fisherman\'s Rope')
+    // Quark
     // rename('quark:rope', 'Rigid Rope')
+
+    // Farmer's Delight
+    rename('farmersdelight:rope', 'Netting')
+    rename('farmersdelight:wheat_dough', 'Dough')
 
     // Nature's Spirit
     rename('natures_spirit:lavender', 'Lavender Bush')

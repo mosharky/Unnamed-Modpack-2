@@ -1,14 +1,16 @@
 // priority: 100
 
 // JSDoc IntelliSense
-// Base KJS events
-/** @import {$TagKubeEvent} from "dev.latvian.mods.kubejs.server.tag.TagKubeEvent" */
-/** @import {$RecipesKubeEvent} from "dev.latvian.mods.kubejs.recipe.RecipesKubeEvent" */
-/** @import {$KubeDataGenerator} from "dev.latvian.mods.kubejs.generator.KubeDataGenerator" */
-// LootJS events/builder
-/** @import {$LootModificationEvent} from "com.almostreliable.lootjs.loot.LootModificationEvent" */
-/** @import {$LootModifier$Builder} from "com.almostreliable.lootjs.loot.modifier.LootModifier$Builder" */
-// MoreJS events
+/**
+ * Base KJS events
+ * @import {$TagKubeEvent} from "dev.latvian.mods.kubejs.server.tag.TagKubeEvent" 
+ * @import {$RecipesKubeEvent} from "dev.latvian.mods.kubejs.recipe.RecipesKubeEvent"
+ * @import {$KubeDataGenerator} from "dev.latvian.mods.kubejs.generator.KubeDataGenerator"
+ * LootJS events/builder
+ * @import {$LootModificationEvent} from "com.almostreliable.lootjs.loot.LootModificationEvent"
+ * @import {$LootModifier$Builder} from "com.almostreliable.lootjs.loot.modifier.LootModifier$Builder"
+ * MoreJS events
+*/
 
 // Loading classes
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')

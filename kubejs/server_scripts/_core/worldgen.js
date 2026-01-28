@@ -28,6 +28,91 @@ function worldgen_Core(e) {
         'minecraft:ore_granite_upper',
         'minecraft:ore_andesite_lower',
         'minecraft:ore_andesite_upper',
+        // hoping to get a different way to get diorite aside from underground idk
+        // 'minecraft:ore_diorite_lower',
         'minecraft:ore_diorite_upper',
+        'minecraft:ore_dirt',
     ], '#minecraft:is_overworld', UNDERGROUND_ORES)
+
+    registerFeature(e, PLACED, 'minecraft:ore_gravel', {
+        feature: 'minecraft:ore_gravel',
+        placement: [
+            { type: 'minecraft:count', count: 2 },
+            { type: 'minecraft:in_square' },
+            {
+                type: 'minecraft:height_range',
+                height: {
+                    type: 'minecraft:uniform',
+                    max_inclusive: { absolute: 60 },
+                    min_inclusive: { absolute: 0 }
+                }
+            },
+            { type: 'minecraft:biome' }
+        ]
+    })
+}
+
+
+/** @param {$KubeDataGenerator} e  */
+function structures_Core(e) {
+    // https://teamabnormals.wiki.gg/wiki/Structure_Repaletters
+    // Swapping all blocks with Blueprint
+    const repaletterJson = {
+        structures: '#kubejs:all_structures',
+        repaletter: [],
+    }
+
+    global.BLOCK_SWAPPER.forEach((replacesWith, replacesBlock) => {
+        if (!Item.exists(replacesWith) || !Item.exists(replacesBlock)) {
+            console.error(`BLOCKSWAP ERROR - One of these blocks don't exist: ${replacesWith} : ${replacesBlock}`)
+            return
+        }
+        repaletterJson.repaletter.push({
+            type: 'blueprint:simple',
+            replaces_block: replacesBlock,
+            replaces_with: replacesWith
+        })
+    })
+
+    e.json('kubejs:blueprint/structure_repaletters/block_swapper', repaletterJson)
+
+
+    global.STRUCTURE_BLOCK_SWAPPER.forEach((swapMap, structure) => {
+        const json = {
+            priority: 1,  // Higher priority value = loads earlier
+            structures: structure,
+            repaletter: [],
+        }
+        swapMap.forEach((replacesWith, replacesBlock) => {
+            if (!Item.exists(replacesWith) || !Item.exists(replacesBlock)) {
+                console.error(`BLOCKSWAP ERROR - One of these blocks don't exist: ${replacesWith} : ${replacesBlock} for structure ${structure}`)
+                return
+            }
+            json.repaletter.push({
+                type: 'blueprint:simple',
+                replaces_block: replacesBlock,
+                replaces_with: replacesWith
+            })
+        })
+
+        e.json(`kubejs:blueprint/structure_repaletters/${nameProcess(structure)}`, json)
+    })
+
+    // Replacing minecraft:chest with oak chest by default
+    e.json('kubejs:blueprint/structure_repaletters/default_oak_chest', {
+        priority: 2,  // Higher priority value = loads later
+        structures: '#kubejs:minecraft/has_oak_chest',
+        repaletter: [
+            {
+                type: 'blueprint:simple',
+                replaces_block: 'minecraft:chest',
+                replaces_with: 'woodworks:oak_chest'
+            },
+            {
+                type: 'blueprint:simple',
+                replaces_block: 'minecraft:trapped_chest',
+                replaces_with: 'woodworks:trapped_oak_chest'
+            },
+        ],
+    })
 }

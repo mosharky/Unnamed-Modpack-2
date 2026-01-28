@@ -138,4 +138,41 @@ function biomeTags_Core(e) {
         'minecraft:old_growth_birch_forest',
         'windswept:chestnut_forest',
     ])
+
+    // Vanilla Backport
+    e.add('minecraft:spawns_wildflowers', [
+        '#natures_spirit:is_autumn'
+    ])
+}
+
+
+/** @param {$TagKubeEvent} e */
+function structureTags_Core(e) {
+    e.add('kubejs:all_structures', /.*/)
+
+    e.add('kubejs:minecraft/has_oak_chest', '#kubejs:all_structures')
+    e.add('kubejs:minecraft/has_spruce_chest', [
+        'minecraft:village_snowy',
+        'minecraft:village_taiga',
+    ])
+    e.add('kubejs:minecraft/has_birch_chest', [])
+    e.add('kubejs:minecraft/has_jungle_chest', [
+        'minecraft:jungle_pyramid'
+    ])
+    e.add('kubejs:minecraft/has_acacia_chest', [
+        'minecraft:village_savanna'
+    ])
+    e.add('kubejs:minecraft/has_dark_oak_chest', [
+        '#minecraft:pillager_outpost',
+        'minecraft:mansion'
+    ])
+    e.add('kubejs:minecraft/has_mangrove_chest', [])
+    e.add('kubejs:minecraft/has_cherry_chest', [])
+    e.add('kubejs:minecraft/has_crimson_chest', [
+        'minecraft:bastion_remnant',
+        /minecraft:ruined_portal.*/,
+        'betterfortresses:fortress',
+        'minecraft:fortress'
+    ])
+    e.add('kubejs:minecraft/has_warped_chest', [])
 }

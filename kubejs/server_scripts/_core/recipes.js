@@ -28,13 +28,14 @@ function recipes_Core(e) {
     }
 
     e.shaped('backpacked:backpack', [
-        ' A ',
         'BCB',
-        'DDD'
+        'CEC',
+        'DAD'
     ], {
         A: 'kubejs:ravager_hide',
-        B: '#c:string',
+        B: '#c:strings',
         C: '#c:ingots/iron',
-        D: 'minecraft:leather'
+        D: 'minecraft:leather',
+        E: '#c:chests/wooden'
     }).id('backpacked:backpack')
 }

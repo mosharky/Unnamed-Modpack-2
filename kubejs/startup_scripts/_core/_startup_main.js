@@ -10,6 +10,11 @@ Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
 // Platform.setModName('ramcompat', 'Relics: Alex\'s Mobs')
 
 function postInit() {
+    // console.log($WoodTypeRegistry.getTypes())
+    // console.log($EveryCompat.getCompatMods())
+    // console.log($EveryCompat.getDependencies())
+    // console.log($ModEntriesConfigs.isEntryEnabled("atmospheric:yucca", "woodworks:chest"))
+    
     constructWoodTypes()
 
     // Adding items to global.REMOVALS and global swaps
@@ -51,6 +56,8 @@ function postInit() {
     removals_Woodworks()
     // removals_EvenBetterNether()
     removals_BountifulFares()
+    removals_Supplementaries()
+    removals_Create()
 
     // Changing blockswap config with KubeJS!
     // processBlockswapConfig()

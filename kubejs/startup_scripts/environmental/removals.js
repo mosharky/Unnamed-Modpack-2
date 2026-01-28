@@ -12,10 +12,7 @@ function removals_Environmental() {
         'environmental:plum'
     ])
 
-    // global.STRUCTURE_BLOCK_SWAPPER.set('environmental:log_cabin', new Map([
-    //     ['minecraft:chest', 'windswept:pine_chest'],
-    //     ['minecraft:trapped_chest', 'windswept:trapped_pine_chest']
-    // ]))
+    // structureSwapChest('environmental:log_cabin', 'windswept:pine')
 
     // global.BLOCKSWAP_CONFIG.swapper.set('environmental:cheerful_plum_leaf_pile', 'immersive_weathering:environmental/cheerful_plum_leaf_pile')
     // global.BLOCKSWAP_CONFIG.swapper.set('environmental:moody_plum_leaf_pile', 'immersive_weathering:environmental/moody_plum_leaf_pile')

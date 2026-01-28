@@ -146,6 +146,9 @@ function worldgen_NaturesSpirit(e) {
         'natures_spirit:sparse_tropical_woods'
     ], VEGETAL_DECORATION)
 
+    // Remove Azolla in swamp and marsh (i want them in tropical biomes only)
+    removeFeatures(e, 'natures_spirit:patch_azolla', ['natures_spirit:marsh', 'minecraft:swamp'], VEGETAL_DECORATION)
+    addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:patch_azolla'), '#kubejs:has_feature/natures_spirit_azolla', VEGETAL_DECORATION)
 
     /* https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
     Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule

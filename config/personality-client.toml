@@ -32,4 +32,4 @@
 
 	[tweaks.sheep]
 		#If Sheep should show their fur color beneath their coat, like in Bedrock edition
-		"Sheep fur overlay" = true
+		"Sheep fur overlay" = false

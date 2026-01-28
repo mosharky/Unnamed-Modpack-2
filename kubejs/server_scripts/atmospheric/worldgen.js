@@ -22,12 +22,13 @@ function worldgen_Atmospheric(e) {
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_barrel_cactus_dunes'), '#kubejs:has_feature/atmospheric_patch_barrel_cactus_dunes', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_agave_large'), '#kubejs:has_feature/atmospheric_patch_agave_large', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:desert_yucca_trees'), '#kubejs:has_feature/atmospheric_desert_yucca_trees', VEGETAL_DECORATION)
-    addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:passion_vines'), '#kubejs:has_feature/atmospheric_passion_vines', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:bushes_sparse_rainforest'), '#kubejs:has_feature/atmospheric_bushes_sparse_rainforest', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:patch_water_hyacinth'), '#kubejs:has_feature/atmospheric_patch_water_hyacinth', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:trees_sparse_rainforest'), '#kubejs:has_feature/atmospheric_trees_sparse_rainforest', VEGETAL_DECORATION)
     addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:trees_rainforest'), '#kubejs:has_feature/atmospheric_trees_rainforest', VEGETAL_DECORATION)
 
+    removeFeatures(e, 'atmospheric:passion_vines', '#atmospheric:is_rainforest', VEGETAL_DECORATION)
+    // addFeatures(e, copyPasteFeature(e, 'atmospheric', PLACED, 'atmospheric:passion_vines'), '#kubejs:has_feature/atmospheric_passion_vines', VEGETAL_DECORATION)
 
     addFeatures(e, registerFeature(e, PLACED, 'kubejs:atmospheric_sparse_kousa', {
         feature: 'atmospheric:kousa',
@@ -66,4 +67,10 @@ function worldgen_Atmospheric(e) {
         feature.config.decorators = []
         registerFeature(e, CONFIGURED, tree, feature)
     })
+
+    if (Platform.isLoaded('bountifulfares')) {
+        // Replaced with Bountiful Fares grassy dirt
+        removeFeatures(e, 'atmospheric:coarse_dirt', 'atmospheric:spiny_thicket', VEGETAL_DECORATION)
+        removeFeatures(e, 'atmospheric:coarse_dirt_laurel_forest', 'atmospheric:laurel_forest', VEGETAL_DECORATION)
+    }
 }

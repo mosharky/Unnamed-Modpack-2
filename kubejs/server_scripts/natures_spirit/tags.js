@@ -64,4 +64,11 @@ function biomeTags_NaturesSpirit(e) {
     e.add('kubejs:has_feature/natures_spirit_lush_fern', [
         '#atmospheric:is_rainforest'
     ])
+
+    e.add('kubejs:has_feature/natures_spirit_azolla', [
+        'atmospheric:rainforest_basin',
+        'atmospheric:sparse_rainforest_basin',
+        'natures_spirit:tropical_basin',
+        'natures_spirit:bamboo_wetlands'
+    ])
 }

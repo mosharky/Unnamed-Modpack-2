@@ -1,5 +1,13 @@
 // priority: 100
 
+/** 
+ * @import {$ItemModificationKubeEvent} "dev.latvian.mods.kubejs.item.ItemModificationKubeEvent" 
+*/
+
+const $WoodTypeRegistry = Java.loadClass('net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry')
+const $EveryCompat = Java.loadClass('net.mehvahdjukaar.every_compat.EveryCompat')
+const $ModEntriesConfigs = Java.loadClass('net.mehvahdjukaar.every_compat.configs.ModEntriesConfigs')
+
 global.WOOD_TYPES = {}
 global.DISABLED_WOOD_TYPES = {}
 global.ITEM_SWAPPER = new Map()
@@ -68,9 +76,16 @@ global.COLOURS = [
     'black'
 ]
 
+/**
+ * Convert a non-JS JSON Object to a JS Object
+ * @param {*} json - the weird built in JSON thing
+ * @returns {Object} JS Object
+ */
+global.json2json = (json) => JSON.parse(JsonIO.toString(json))
+
 global.readJson = (mod, location, type) => {
-    if (type == undefined) return JSON.parse(JsonIO.toString(KJSTweaks.readJsonFromMod(mod, location)))
-    else return JSON.parse(JsonIO.toString(KJSTweaks.readJsonFromMod(mod, location, type)))
+    if (type == undefined) return global.json2json(KJSTweaks.readJsonFromMod(mod, location))
+    else return global.json2json(KJSTweaks.readJsonFromMod(mod, location, type))
 }
 
 // Collect all strings in a nested object with recursion
@@ -106,6 +121,21 @@ function swapWoodType(woodTypeFrom, woodTypeTo) {
     })
 }
 
+/**
+ * Replace vanilla chest with new chest in a structure
+ * @param {String} structure - Structure ID or tag
+ * @param {String} woodType - The woodtype (mod:type)
+ */
+function structureSwapChest(structure, woodType) {
+    const woodTypeSplit = woodType.split(':')
+    const mod = woodTypeSplit[0]; 
+    const type = woodTypeSplit[1]
+    global.STRUCTURE_BLOCK_SWAPPER.set(structure, new Map([
+        ['minecraft:chest', global.WOOD_TYPES[mod][type].woodworks.chest],
+        ['minecraft:trapped_chest', global.WOOD_TYPES[mod][type].woodworks.trapped_chest],
+    ]))
+}
+
 // maybe in the future I could construct this from the everycomp config
 const woodTypesToConstruct = {
     minecraft: {
@@ -123,9 +153,9 @@ const woodTypesToConstruct = {
         pale_oak: true,  // vanilla backport's mod id changed
     },
     // quark: {
-        // azalea: false,
-        // ancient: false,
-        // blossom: false,
+    // azalea: false,
+    // ancient: false,
+    // blossom: false,
     // },
     upgrade_aquatic: {
         driftwood: true,
@@ -146,14 +176,14 @@ const woodTypesToConstruct = {
         plum: true,
         wisteria: false,
     },
-    endergetic: {
-        poise: true,
-    },
+    // endergetic: {
+    // poise: true,
+    // },
     autumnity: {
         maple: true,
     },
     // caverns_and_chasms: {
-        // azalea: true,
+    // azalea: true,
     // },
     natures_spirit: {
         redwood: true,
@@ -175,9 +205,9 @@ const woodTypesToConstruct = {
         saxaul: true,
     },
     // windswept: {
-        // holly: true,
-        // chestnut: true,
-        // pine: true
+    // holly: true,
+    // chestnut: true,
+    // pine: true
     // },
     darkerdepths: {
         petrified: true,
@@ -190,36 +220,36 @@ const woodTypesToConstruct = {
         soulblight: true,
     },
     // collectorsreap: {
-        // lucuma: true,
+    // lucuma: true,
     // },
     // netherexp: {
-        // claret: true,
-        // smokestalk: true,
+    // claret: true,
+    // smokestalk: true,
     // },
     // goety: {
-        // haunted: true,
-        // rotten: true,
-        // windswept: true,
-        // pine: false,
-        // chorus: true,
-        // corrupt_chorus: true,
+    // haunted: true,
+    // rotten: true,
+    // windswept: true,
+    // pine: false,
+    // chorus: true,
+    // corrupt_chorus: true,
     // },
     // cataclysm: {
-        // chorus: false,
+    // chorus: false,
     // },
-    alexscaves: {
-        pewen: true,
-        thornwood: true,
-    },
+    // alexscaves: {
+    // pewen: true,
+    // thornwood: true,
+    // },
     malum: {
         runewood: true,
         soulwood: true,
     },
     // unusual_prehistory: {
-        // ginkgo: true,
-        // lepidodendron: true,
+    // ginkgo: true,
+    // lepidodendron: true,
     // },
     // unusualend: {
-        // chorus_nest: true,
+    // chorus_nest: true,
     // },
 }

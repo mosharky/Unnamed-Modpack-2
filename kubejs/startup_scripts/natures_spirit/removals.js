@@ -8,28 +8,14 @@ function removals_NaturesSpirit() {
         /natures_spirit:.*chalk.*/,
         'natures_spirit:coconut_half',
         'natures_spirit:coconut_shell',
+        /natures_spirit:.*pizza/,
+        'natures_spirit:cheese_bucket',
     ])
 
-
-    global.STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*coconut.*/, new Map([
-        ['minecraft:chest', 'everycomp:abnww/natures_spirit/coconut_chest'],
-        ['minecraft:trapped_chest', 'everycomp:abnww/natures_spirit/trapped_coconut_chest']
-    ]))
-
-    global.STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*adobe.*/, new Map([
-        ['minecraft:chest', 'everycomp:abnww/natures_spirit/joshua_chest'],
-        ['minecraft:trapped_chest', 'everycomp:abnww/natures_spirit/trapped_joshua_chest']
-    ]))
-
-    global.STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*cypress.*/, new Map([
-        ['minecraft:chest', 'everycomp:abnww/natures_spirit/cypress_chest'],
-        ['minecraft:trapped_chest', 'everycomp:abnww/natures_spirit/trapped_cypress_chest']
-    ]))
-
-    global.STRUCTURE_BLOCK_SWAPPER.set(/natures_spirit:.*wisteria.*/, new Map([
-        ['minecraft:chest', 'everycomp:abnww/natures_spirit/wisteria_chest'],
-        ['minecraft:trapped_chest', 'everycomp:abnww/natures_spirit/trapped_wisteria_chest']
-    ]))
+    structureSwapChest('natures_spirit:village_adobe', 'natures_spirit:joshua')
+    structureSwapChest('natures_spirit:village_coconut', 'natures_spirit:coconut')
+    structureSwapChest('natures_spirit:village_cypress', 'natures_spirit:cypress')
+    structureSwapChest('natures_spirit:village_wisteria', 'natures_spirit:wisteria')
 
     // The rest of the pink sand blocks should be swapped from structures if needed
     global.BLOCK_SWAPPER.set('natures_spirit:pink_sandstone', 'atmospheric:red_arid_sandstone')

@@ -22,4 +22,15 @@ function recipes_BrewinAndChewin(e) {
     //     temperature: 4,
     //     unit: 'millibuckets'
     // }).id('brewinandchewin:fermenting/pale_jane_from_rice_wine')
+
+    e.shaped('brewinandchewin:pizza', [
+        ' A ',
+        'BCB',
+        ' D '
+    ], {
+        A: '#brewinandchewin:foods/cheese_wedge',
+        B: '#brewinandchewin:foods/pizza_topping',
+        C: 'farmersdelight:tomato_sauce',
+        D: 'farmersdelight:pie_crust'
+    }).id('brewinandchewin:pizza')
 }
