@@ -24,39 +24,37 @@ global.BLOCKSWAP_CONFIG = {
 }
 global.ENTITY_REMOVALS = []
 global.REMOVALS = {
-    all: new Set(),
+    set: new Set(),
+    arr: [],
+    items: new Set(),
+    blocks: new Set(),
     add: function (entry) {
         if (entry != undefined) {
             if (entry instanceof Array) {
                 // Filters out undefined elements
-                this.all = new Set(this.getAsArray().concat(entry.filter(e => e !== undefined)))
+                for (const elem of entry) this.add(elem)
             } else if (entry.constructor === Object) {
                 // Add all strings in an object and any nested objects
                 this.add(collectStrings(entry))
+            } else if (entry instanceof RegExp) {
+                this.add(Ingredient.of(entry).itemIds.toArray())
+                if (global.DEBUG_MODE) console.log(`"${entry}" has matched: ${Ingredient.of(entry).itemIds}`)
             } else {
-                this.all.add(entry)
+                if (Item.exists(entry)) {
+                    if (!this.set.has(entry)) this.arr.push(entry)
+                    this.set.add(entry)
+                    if (Item.of(entry).getBlock() != null) this.blocks.add(entry)
+                    else this.items.add(entry)
+                } else {
+                    console.error(`Removal: "${entry}" doesn't exist!`)
+                }
             }
+        } else {
+            console.error('Cant remove undefined!')
         }
-    },
-    getAsArray: function () { return Array.from(this.all) },
-    getBlocks: function () {
-        let blockSet = new Set()
-        this.all.forEach(entry => {
-            if (Item.of(entry).isBlock()) blockSet.add(entry)
-        })
-        return blockSet
-    },
-    getItems: function () {
-        let itemSet = new Set()
-        this.all.forEach(entry => {
-            if (!Item.of(entry).isBlock()) itemSet.add(entry)
-        })
-        return itemSet
     }
 }
-
 global.DEBUG_MODE = false
-
 global.COLOURS = [
     'white',
     'orange',
@@ -128,7 +126,7 @@ function swapWoodType(woodTypeFrom, woodTypeTo) {
  */
 function structureSwapChest(structure, woodType) {
     const woodTypeSplit = woodType.split(':')
-    const mod = woodTypeSplit[0]; 
+    const mod = woodTypeSplit[0];
     const type = woodTypeSplit[1]
     global.STRUCTURE_BLOCK_SWAPPER.set(structure, new Map([
         ['minecraft:chest', global.WOOD_TYPES[mod][type].woodworks.chest],

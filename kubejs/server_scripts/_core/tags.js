@@ -1,6 +1,6 @@
 /** @param {$TagKubeEvent} e */
 function itemTags_Core(e) {
-    e.removeAllTagsFrom(global.REMOVALS.getAsArray())
+    e.removeAllTagsFrom(global.REMOVALS.arr)
 }
 
 /** @param {$TagKubeEvent} e */

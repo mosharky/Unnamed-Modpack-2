@@ -10,7 +10,7 @@ function lootReplacements_Core(all) {
         all.replaceLoot(key, value, true)
     })
 
-    global.REMOVALS.all.forEach(removal => {
+    global.REMOVALS.set.forEach(removal => {
         if (global.ITEM_SWAPPER.has(removal) || global.BLOCK_SWAPPER.has(removal)) {
             return
         }

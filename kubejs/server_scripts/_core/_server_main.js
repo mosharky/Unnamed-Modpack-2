@@ -6,7 +6,7 @@ ServerEvents.tags('item', e => {
     itemTags_Neapolitan(e)
 
     if (!global.DEBUG_MODE) {
-        e.add('c:hidden_from_recipe_viewers', global.REMOVALS.getAsArray().concat([
+        e.add('c:hidden_from_recipe_viewers', global.REMOVALS.arr.concat([
             /excavated_variants:.*/,
         ]))
     }
@@ -82,7 +82,7 @@ ServerEvents.recipes(e => {
     recipes_Create(e)
 
     // Fully removing any recipe tied to items in REMOVALS
-    global.REMOVALS.all.forEach(removal => {
+    global.REMOVALS.set.forEach(removal => {
         e.remove({ input: removal })
         e.remove({ output: removal })
     })
