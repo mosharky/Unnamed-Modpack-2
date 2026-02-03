@@ -17,9 +17,7 @@ function biomeTags_NaturesSpirit(e) {
         'natures_spirit:carnation_fields',
         'natures_spirit:cypress_fields',
         'natures_spirit:lavender_fields',
-        'natures_spirit:sparse_tropical_woods',
-        'natures_spirit:tropical_basin',
-        'natures_spirit:tropical_woods',
+        '#natures_spirit:is_tropical_woods',
         '#atmospheric:is_rainforest'
     ])
     e.add('kubejs:has_feature/chert_cliff', [

@@ -63,7 +63,7 @@ function structures_Core(e) {
     }
 
     global.BLOCK_SWAPPER.forEach((replacesWith, replacesBlock) => {
-        if (!Item.exists(replacesWith) || !Item.exists(replacesBlock)) {
+        if (Block.getBlock(replacesWith) == null || !Block.getBlock(replacesBlock) == null) {
             console.error(`BLOCKSWAP ERROR - One of these blocks don't exist: ${replacesWith} : ${replacesBlock}`)
             return
         }
@@ -84,7 +84,7 @@ function structures_Core(e) {
             repaletter: [],
         }
         swapMap.forEach((replacesWith, replacesBlock) => {
-            if (!Item.exists(replacesWith) || !Item.exists(replacesBlock)) {
+            if (Block.getBlock(replacesWith) == null || !Block.getBlock(replacesBlock) == null) {
                 console.error(`BLOCKSWAP ERROR - One of these blocks don't exist: ${replacesWith} : ${replacesBlock} for structure ${structure}`)
                 return
             }

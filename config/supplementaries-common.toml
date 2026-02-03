@@ -283,7 +283,7 @@
 	blackstone_tile = true
 	#Buntings are automatically disabled if 'rope' feature is disabled
 	bunting = true
-	pancake = true
+	pancake = false
 	checker_block = true
 	raked_gravel = true
 	feather_block = true

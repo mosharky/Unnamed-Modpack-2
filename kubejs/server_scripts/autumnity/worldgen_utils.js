@@ -5,6 +5,7 @@
  * - Get a spotted placed feature JSON object
  * @param {$KubeDataGenerator} event - generateData event
  * @param {String} featureId - ID of the configured feature to be placed
+ * @param {String} sapling - ID of the sapling
  * @returns {String} Placed feature ID
  */
 function spottedPlacedFeature(event, featureId, sapling) {

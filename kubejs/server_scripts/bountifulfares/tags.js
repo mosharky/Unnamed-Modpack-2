@@ -1,4 +1,13 @@
 /** @param {$TagKubeEvent} e */
+function blockTags_BountifulFares(e) {
+    e.add('bountifulfares:plum_leaves', [
+        'environmental:cheerful_plum_leaves',
+        'environmental:moody_plum_leaves',
+        'environmental:plum_leaves',
+    ])
+}
+
+/** @param {$TagKubeEvent} e */
 function biomeTags_BountifulFares(e) {
     // ⚠️ TREES ⚠️
     e.add('bountifulfares:has_apple_trees', [
@@ -23,7 +32,7 @@ function biomeTags_BountifulFares(e) {
 
     e.removeAll('bountifulfares:has_lemon_trees')
     e.add('bountifulfares:has_lemon_trees', [
-        'climaterivers:lukewarm_river',
+        'nomansland:lush_river',
         'natures_spirit:tropical_basin',
         'atmospheric:rainforest_basin',
     ])
@@ -319,15 +328,6 @@ function biomeTags_BountifulFares(e) {
         '#environmental:is_pine_barrens',
         'atmospheric:laurel_forest',
         'atmospheric:spiny_thicket',
-    ])
-
-    e.removeAll('bountifulfares:has_grassy_dirt')
-    e.add('bountifulfares:has_grassy_dirt', [
-        '#minecraft:is_taiga',
-        '#natures_spirit:is_alpine',
-        '#natures_spirit:is_autumn',
-        '#environmental:is_pine_barrens',
-        'atmospheric:laurel_forest',
-        'atmospheric:spiny_thicket',
+        'nomansland:old_growth_forest',
     ])
 }

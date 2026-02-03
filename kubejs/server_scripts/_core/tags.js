@@ -1,6 +1,7 @@
 /** @param {$TagKubeEvent} e */
 function itemTags_Core(e) {
     e.removeAllTagsFrom(global.REMOVALS.arr)
+    e.add('kubejs:disabled', global.REMOVALS.arr)
 }
 
 /** @param {$TagKubeEvent} e */
@@ -47,6 +48,10 @@ function blockTags_Core(e) {
         'minecraft:mud'
     ])
     */
+
+    // Bountiful Fares mixins to make fruits able to grow on data-driven leaves
+    // e.add('nameless:can_hang_on/hoary_apple', [])
+    e.add('nameless:can_hang_on/walnut', 'nomansland:walnut_leaves')
 }
 
 /** @param {$TagKubeEvent} e */

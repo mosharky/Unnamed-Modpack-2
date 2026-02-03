@@ -17,6 +17,7 @@ ServerEvents.tags('block', e => {
     // blockTags_AlexsCaves(e)
     // blockTags_AlexsMobs(e)
     blockTags_SnowRealMagic(e)
+    blockTags_BountifulFares(e)
 })
 
 ServerEvents.tags('entity_type', e => {
@@ -48,6 +49,9 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_UpgradeAquatic(e)
     // biomeTags_Windswept(e)
     biomeTags_BountifulFares(e)
+
+    // nml changes need to load way later
+    biomeTags_NoMansLand(e)
 })
 
 ServerEvents.tags('worldgen/structure', e => {
@@ -80,6 +84,8 @@ ServerEvents.recipes(e => {
     recipes_BountifulFares(e)
     recipes_NaturesSpirit(e)
     recipes_Create(e)
+    recipes_NoMansLand(e)
+    recipes_Autumnity(e)
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.set.forEach(removal => {
@@ -142,17 +148,20 @@ ServerEvents.generateData('after_mods', e => {
     // worldgen_ScGuns(e)
     worldgen_FarmersDelight(e)
     worldgen_BountifulFares(e)
+    worldgen_NoMansLand(e)
 
     structures_Core(e)
 })
 
 LootJS.modifiers(e => {
     // Replacements
+    const noBlocks = e.addTableModifier(/(?!.*:blocks\/).*/)
     const all = e.addTableModifier(/.*/)
-    lootReplacements_Core(all)
+    lootReplacements_Core(noBlocks)
     // lootReplacements_ImmersiveEnchanting(all)
     lootRemovals_EndRem(all)
     lootRemovals_Environmental(all)
+    lootRemovals_NoMansLand(all)
 
     lootTables_Core(e)
     // lootTables_EndRem(e)

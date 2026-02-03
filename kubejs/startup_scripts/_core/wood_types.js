@@ -5,7 +5,7 @@ function constructWoodTypes() {
         global.DISABLED_WOOD_TYPES[mod] = {}
 
         Object.keys(woodTypesToConstruct[mod]).forEach(woodType => {
-            if (global.DEBUG_MODE) console.log(`Constructing ${mod}:${woodType}`)
+            if (global.DEBUG_MODE) console.log(`Constructing "${mod}:${woodType}"`)
             if (woodTypesToConstruct[mod][woodType]) {
                 global.WOOD_TYPES[mod][woodType] = {}
             } else {

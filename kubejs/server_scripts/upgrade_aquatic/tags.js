@@ -7,21 +7,18 @@ function biomeTags_UpgradeAquatic(e) {
     e.add('upgrade_aquatic:has_feature/diftwood_river', [
         'minecraft:river',
         'minecraft:frozen_river',
-        'climaterivers:lukewarm_river',
-        'climaterivers:cold_river'
+        'nomansland:lush_river',
     ])
 
     e.remove('upgrade_aquatic:has_feature/flowering_rish', 'minecraft:river')
     e.add('upgrade_aquatic:has_feature/flowering_rish', [
         'minecraft:river',
-        'climaterivers:lukewarm_river',
-        'climaterivers:cold_river'
+        'nomansland:lush_river',
     ])
 
     e.remove('upgrade_aquatic:has_feature/river_tree', '#minecraft:is_river')
     e.add('upgrade_aquatic:has_feature/river_tree', [
         'minecraft:river',
-        'climaterivers:cold_river'
     ])
 
     e.add('upgrade_aquatic:has_feature/searocket', 'natures_spirit:tropical_shores')

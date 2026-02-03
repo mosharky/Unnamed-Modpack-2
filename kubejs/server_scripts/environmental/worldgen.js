@@ -12,7 +12,7 @@ function worldgen_Environmental(e) {
     addFeatures(e, 'environmental:patch_delphiniums', '#kubejs:has_feature/environmental_delphiniums', VEGETAL_DECORATION)
 
     removeBiomeModifier(e, 'environmental:add_feature/swamp_vegetation')
-    addFeatures(e, 'environmental:patch_duckweed_swamp', '#kubejs:has_feature/environmental_duckweed_swamp', VEGETAL_DECORATION)
+    // addFeatures(e, 'environmental:patch_duckweed_swamp', '#kubejs:has_feature/environmental_duckweed_swamp', VEGETAL_DECORATION)
 
     removeBiomeModifier(e, 'environmental:add_feature/bluebell')
 
@@ -62,7 +62,7 @@ function worldgen_Environmental(e) {
             directions: ['down'],
             exclusion_radius_xz: 1,
             exclusion_radius_y: 0,
-            probability: 0.2,
+            probability: 0.01,
             required_empty_blocks: 1
         })
 

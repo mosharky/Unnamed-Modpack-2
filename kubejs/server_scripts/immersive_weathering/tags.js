@@ -27,12 +27,11 @@ function biomeTags_ImmersiveWeathering(e) {
         'minecraft:mangrove_swamp',
         'natures_spirit:marsh',
         'minecraft:river',
-        'climaterivers:lukewarm_river',
-        'climaterivers:cold_river',
+        'nomansland:lush_river',
     ])
     
     e.add('immersive_weathering:has_sandy_dirt', [
-        'climaterivers:warm_river',
+        'nomansland:desert_river',
         // NS biomes that have sandy soil
         'natures_spirit:arid_highlands',
         'natures_spirit:blooming_highlands',

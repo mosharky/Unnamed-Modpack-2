@@ -170,7 +170,7 @@ const woodTypesToConstruct = {
     },
     environmental: {
         willow: false,
-        pine: false,
+        pine: true,
         plum: true,
         wisteria: false,
     },
@@ -178,7 +178,7 @@ const woodTypesToConstruct = {
     // poise: true,
     // },
     autumnity: {
-        maple: true,
+        maple: false,
     },
     // caverns_and_chasms: {
     // azalea: true,

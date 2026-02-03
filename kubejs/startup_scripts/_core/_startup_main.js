@@ -58,6 +58,8 @@ function postInit() {
     removals_BountifulFares()
     removals_Supplementaries()
     removals_Create()
+    removals_NoMansLand()
+    removals_RusticDelight()
 
     // Changing blockswap config with KubeJS!
     // processBlockswapConfig()

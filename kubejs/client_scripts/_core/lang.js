@@ -18,6 +18,8 @@ ClientEvents.lang('en_us', e => {
     rename('natures_spirit:hibiscus', 'Lonely Hibiscus')
     rename('natures_spirit:lotus_flower', 'Aquatic Lotus Flower')
     rename('natures_spirit:lotus_stem', 'Aquatic Lotus Stem')
+    rename('natures_spirit:oat_grass', 'Dry Oat Grass')
+    rename('natures_spirit:tall_oat_grass', 'Tall Dry Oat Grass')
 
     // Even Better Nether
     // rename('evenbetternether:barrel_cactus', 'Warped Barrel Cactus')
@@ -48,4 +50,7 @@ ClientEvents.lang('en_us', e => {
     rename('bountifulfares:stripped_plum_wood', 'Stripped Fruitful Plum Wood')
     rename('bountifulfares:plum_leaves', 'Fruitful Plum Leaves')
     rename('bountifulfares:plum_sapling', 'Fruitful Plum Sapling')
+
+    // No Man's Land
+    rename('nomansland:oat_grass', 'Lush Oat Grass')
 })

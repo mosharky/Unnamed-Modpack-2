@@ -87,6 +87,9 @@
 		[types.stone_type.oreganized]
 			glance = true
 
+		[types.stone_type.nomansland]
+			silt = true
+
 		[types.cake.bountifulfares]
 			coconut_cake = true
 			cocoa_cake = true
@@ -105,6 +108,9 @@
 			banana_cake = true
 			mint_cake = true
 			adzuki_cake = true
+
+		[types.cake.nomansland]
+			fruit_cake = true
 
 		[types.wood_type.dungeonsdelight]
 			wormwood = true
@@ -194,6 +200,12 @@
 		[types.wood_type.malum]
 			runewood = true
 			soulwood = true
+
+		[types.wood_type.nomansland]
+			pine = true
+			maple = true
+			walnut = true
+			willow = true
 
 		[types.leaves_type.pastel]
 			weeping_gala = true
@@ -308,6 +320,19 @@
 			azure_runewood = true
 			soulwood = true
 
+		[types.leaves_type.nomansland]
+			yellow_birch = true
+			autumnal_oak = true
+			pale_cherry = true
+			frosted = true
+			pine = true
+			maple = true
+			red_maple = true
+			walnut = true
+			willow = true
+			apple_fruit = true
+			pear_fruit = true
+
 #Disables specific entries
 [entries]
 
@@ -368,6 +393,10 @@
 		[entries.wood_type.bountifulfares]
 			trellis = true
 			pickets = true
+
+		[entries.wood_type.nomansland]
+			bookshelf = true
+			trimmed_planks = true
 
 		[entries.leaves_type.woodworks]
 			leaf_pile = true

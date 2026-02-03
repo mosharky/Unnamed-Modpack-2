@@ -1,14 +1,6 @@
 // priority: -1
-ClientEvents.loggedIn(e => {
-    // fixes access to global vars
-    e.client.runCommandSilent('kubejs reload client-scripts')
-})
-
 ItemEvents.modifyTooltips(e => {
-    global.REMOVALS.arr.forEach(removal => {
-        console.log(removal)
-        e.add(removal, Text.red('DISABLED. Report to momo if you obtained this.').append(Text.darkGray('\nThis item is supposed to be replaced; ignore if found in a menu').italic()))
-    })
+    e.add('#kubejs:disabled', Text.red('DISABLED. Report to momo if you obtained this.').append(Text.darkGray('\nThis item is supposed to be replaced; ignore if found in a menu').italic()))
 })
 
 RecipeViewerEvents.removeCategories(e => {
