@@ -65,6 +65,7 @@ backups/
 Distant_Horizons_server_data/
 emojiful/
 mapwright_maps/
+notepad/
 
 # root files
 knownkeys.txt
@@ -89,6 +90,7 @@ irisUpdateInfo.json
 snr_favorite_styles.nbt
 servers.dat_old
 imgui.ini
+ponders_watched.json
 
 # launcher-related
 .curseclient

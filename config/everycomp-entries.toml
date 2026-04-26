@@ -220,6 +220,9 @@
 			ancient = true
 			blossom = true
 
+		[types.wood_type.netherexp]
+			claret = true
+
 		[types.leaves_type.pastel]
 			weeping_gala = true
 			nephrite_blossom = true

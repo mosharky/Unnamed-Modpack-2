@@ -76,6 +76,7 @@ moddata/
 moonlight-global-datapacks/
 downloads/
 mapwright_maps/
+notepad/
 
 # root files
 knownkeys.txt
@@ -103,6 +104,7 @@ caxton_impl.dll
 observable_announce
 command_history.txt
 imgui.ini
+ponders_watched.json
 
 # dev environment stuff
 .probe/
