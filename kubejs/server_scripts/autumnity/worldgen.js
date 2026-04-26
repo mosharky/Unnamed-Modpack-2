@@ -1,9 +1,7 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_Autumnity(e) {
-
-
-
-
+    // Disable all Autumnity biomes
+    e.json('autumnity:blueprint/modded_biome_slices/autumn', disableBiomeSliceJson)
 
     addFeatures(e,
         copyPasteFeature(e, 'autumnity', PLACED, 'autumnity:patch_foul_berry_bush'),
@@ -24,13 +22,10 @@ function worldgen_Autumnity(e) {
     )
 
     // Maple tree amalgamations
-    // Disable all Autumnity biomes
-    e.json('autumnity:blueprint/modded_biome_slices/autumn', disableBiomeSliceJson)
     // Remove Autumnity trees from vanilla worldgen
     removeBiomeModifier(e, 'autumnity:add_feature/maple_tree')
-    removeBiomeModifier(e, 'autumnity:add_feature/spotted_maple_tree/orange')
-    removeBiomeModifier(e, 'autumnity:add_feature/spotted_maple_tree/red')
-    removeBiomeModifier(e, 'autumnity:add_feature/spotted_maple_tree/yellow')
+    removeBiomeModifier(e, 'autumnity:add_feature/orange_spotted_maple_tree')
+    removeBiomeModifier(e, 'autumnity:add_feature/red_orange_spotted_maple_tree')
     // Nature's Spirit maple tree with NML maple log and Autumnity leaves
     const mapleTreeJson = {
         type: 'minecraft:tree',
@@ -79,13 +74,18 @@ function worldgen_Autumnity(e) {
                 },
                 branch_end_offset_from_top: {
                     type: 'minecraft:uniform',
-                    value: { max_inclusive: -1, min_inclusive: -4 }
+                    max_inclusive: -1, 
+                    min_inclusive: -4
                 },
                 branch_horizontal_length: {
                     type: 'minecraft:uniform',
-                    value: { max_inclusive: 3, min_inclusive: 1 }
+                    max_inclusive: 3,
+                    min_inclusive: 1
                 },
-                branch_start_offset_from_top: { max_inclusive: -4, min_inclusive: -5 }
+                branch_start_offset_from_top: { 
+                    max_inclusive: -4, 
+                    min_inclusive: -5 
+                }
             },
             trunk_provider: {
                 type: 'minecraft:simple_state_provider',
@@ -145,4 +145,30 @@ function worldgen_Autumnity(e) {
             addFeatures(e, spottedPlacedFeature(e, `kubejs:${color}_maple_tree_fallen_leaves_bees_0002`, `autumnity:${color}_maple_sapling`), `#kubejs:has_feature/spotted_maple_tree/${color}`, VEGETAL_DECORATION)
         }
     })
+
+    // Sparse green maple tree placement
+    addFeatures(e,
+        registerFeature(e, PLACED, 'kubejs:sparse_maple_tree', {
+            feature: 'kubejs:maple_tree_bees_0002',
+            placement: [
+                {
+                    type: 'minecraft:count',
+                    count: {
+                        type: 'minecraft:weighted_list',
+                        distribution: [
+                            { data: 1, weight: 9 },
+                            { data: 2, weight: 1 }
+                        ]
+                    }
+                },
+                { type: 'minecraft:in_square' },
+                { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+                { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+                { type: 'minecraft:biome' },
+                wouldSurvive('autumnity:maple_sapling')
+            ]
+        }),
+        '#kubejs:has_feature/sparse_maple_tree',
+        VEGETAL_DECORATION
+    )
 }

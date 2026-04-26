@@ -3,59 +3,47 @@ function worldgen_NaturesSpirit(e) {
     removeFeatures(e, 'natures_spirit:patch_beach_grass', 'natures_spirit:tropical_shores', VEGETAL_DECORATION)
     removeFeatures(e, 'natures_spirit:cattails_placed', '#minecraft:is_overworld', VEGETAL_DECORATION)
 
-    // Changing maple trees to use Autumnity's maple logs
-    // https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/resources/data/natures_spirit/worldgen/configured_feature/orange_maple_tree.json
-    const mapleColors = ['orange', 'yellow', 'red'].forEach(color => {
-        let treeFeatureJson = getFeatureJson('natures_spirit', CONFIGURED, `natures_spirit:${color}_maple_tree`)
-        treeFeatureJson.config.trunk_provider.state.Name = 'nomansland:maple_log'
-        treeFeatureJson.config.foliage_provider.state.Name = `autumnity:${color}_maple_leaves`
-        treeFeatureJson.config.decorators = []
-        registerFeature(e, CONFIGURED, `natures_spirit:${color}_maple_tree`, treeFeatureJson)
-        // Adding NS maple trees to vanilla biomes, same as Autumnity did
-        addFeatures(e, spottedPlacedFeature(e, `natures_spirit:${color}_maple_tree`, `natures_spirit:${color}_maple_sapling`), `#kubejs:has_feature/spotted_maple_tree/${color}`, VEGETAL_DECORATION)
-    })
-
-    // Replacing Autumnity's green maple with a new one using NS maple tree type
-    // Configured feature:
-    const mapleConfigured = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:orange_maple_tree')
-    mapleConfigured.config.decorators = []
-    mapleConfigured.config.trunk_provider.state.Name = 'nomansland:maple_log'
-    mapleConfigured.config.foliage_provider.state.Name = 'autumnity:maple_leaves'
-    registerFeature(e, CONFIGURED, 'autumnity:maple_tree', mapleConfigured)
-    // Placed feature:
-    const maplePlaced = getFeatureJson('natures_spirit', PLACED, 'natures_spirit:orange_maple_checked')
-    maplePlaced.feature = 'autumnity:maple_tree'
-    maplePlaced.placement[0].predicate.state.Name = 'autumnity:maple_sapling'
-    registerFeature(e, PLACED, 'kubejs:maple_tree_checked', maplePlaced)
-    // Replacing minecraft:fancy_oak_checked with kubejs:maple_tree_checked
-    const mapleSpawnConfigured = getFeatureJson('natures_spirit', CONFIGURED, 'natures_spirit:maple_spawn')
-    mapleSpawnConfigured.config.features[3] = 'kubejs:maple_tree_checked'
-    registerFeature(e, CONFIGURED, 'natures_spirit:maple_spawn', mapleSpawnConfigured)
-    // Sparse tree placement
-    addFeatures(e,
-        registerFeature(e, PLACED, 'kubejs:sparse_maple_tree', {
-            feature: 'autumnity:maple_tree',
-            placement: [
-                {
-                    type: 'minecraft:count',
-                    count: {
-                        type: 'minecraft:weighted_list',
-                        distribution: [
-                            { data: 1, weight: 9 },
-                            { data: 2, weight: 1 }
-                        ]
-                    }
-                },
-                { type: 'minecraft:in_square' },
-                { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
-                { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
-                { type: 'minecraft:biome' },
-                wouldSurvive('autumnity:maple_sapling')
-            ]
-        }),
-        '#kubejs:has_feature/sparse_maple_tree',
-        VEGETAL_DECORATION
-    )
+    // replace maple tree features in NS biomes
+    removeFeatures(e, 'natures_spirit:maple2_placed', 'natures_spirit:maple_woodlands', VEGETAL_DECORATION)
+    removeFeatures(e, 'natures_spirit:maple_placed', ['natures_spirit:golden_wilds', 'natures_spirit:marigold_meadows'], VEGETAL_DECORATION)
+    addFeatures(e, registerFeature(e, PLACED, 'kubejs:maple_forest_trees', {
+        feature: 'autumnity:maple_forest_trees',
+        placement: [
+            {
+                type: 'minecraft:count',
+                count: {
+                    type: 'minecraft:weighted_list',
+                    distribution: [
+                        { data: 12, weight: 9 },
+                        { data: 13, weight: 1 }
+                    ]
+                }
+            },
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+            { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+            { type: 'minecraft:biome' }
+        ]
+    }), 'natures_spirit:maple_woodlands', VEGETAL_DECORATION)
+    addFeatures(e, registerFeature(e, PLACED, 'kubejs:plains_maple_trees', {
+        feature: 'autumnity:pumpkin_fields_trees',
+        placement: [
+            {
+                type: 'minecraft:count',
+                count: {
+                    type: 'minecraft:weighted_list',
+                    distribution: [
+                        { data: 2, weight: 4 },
+                        { data: 3, weight: 1 }
+                    ]
+                }
+            },
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+            { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+            { type: 'minecraft:biome' }
+        ]
+    }), ['natures_spirit:golden_wilds', 'natures_spirit:marigold_meadows'], VEGETAL_DECORATION)
 
     // Removing/replacing cliff features
     removeFeatures(e, [

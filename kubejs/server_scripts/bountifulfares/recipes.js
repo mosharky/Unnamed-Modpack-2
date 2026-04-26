@@ -1,5 +1,12 @@
 /** @param {$RecipesKubeEvent} e  */
 function recipes_BountifulFares(e) {
+    // bountiful fares flour > create
+    e.recipes.create.milling([
+        'bountifulfares:flour',
+        CreateItem.of('2x bountifulfares:flour', 0.25),
+        CreateItem.of('minecraft:wheat_seeds', 0.25)
+    ], 'minecraft:wheat')
+
     // coconut
     e.replaceInput({}, 'bountifulfares:coconut', 'natures_spirit:coconut')
     e.remove({ id: 'bountifulfares:coconut_half_from_coconut' })
@@ -18,6 +25,7 @@ function recipes_BountifulFares(e) {
 
     // removing cringe milling recipes
     e.remove({ id: 'bountifulfares:coconut_coir_from_coconut_milling' })  // for natures spirit coconut recipe
+    e.remove({ id: 'bountifulfares:palm_mulch_from_palm_frond_milling' })  // i removed palm fronds!!!
     // these should be relegated to Create's milling
     e.remove({ id: 'minecraft:amethyst_shard_from_amethyst_block_milling' })
     e.remove({ id: 'bountifulfares:amethyst_shard_from_amethyst_milling' })

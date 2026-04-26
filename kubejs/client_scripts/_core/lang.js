@@ -8,11 +8,12 @@ ClientEvents.lang('en_us', e => {
     // rename('quark:rope', 'Rigid Rope')
 
     // Farmer's Delight
+    // TODO: this aint working
     rename('farmersdelight:rope', 'Netting')
     rename('farmersdelight:wheat_dough', 'Dough')
 
     // Nature's Spirit
-    rename('natures_spirit:lavender', 'Lavender Bush')
+    rename('natures_spirit:lavender', 'Tall Lavender Bush')
     rename('natures_spirit:bluebell', 'Bluebell Bush')
     rename('natures_spirit:foxglove', 'Purple Foxglove')
     rename('natures_spirit:hibiscus', 'Lonely Hibiscus')

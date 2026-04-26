@@ -87,6 +87,7 @@ function biomeTags_Core(e) {
         'natures_spirit:boreal_taiga',
     ])
 
+    // TODO more sparse maple tree biomes
     e.add('kubejs:has_feature/sparse_maple_tree', [
         'minecraft:forest',
         'minecraft:windswept_forest',
@@ -104,7 +105,7 @@ function biomeTags_Core(e) {
         'windswept:snowy_pine_barrens'
     ])
     e.add('kubejs:has_feature/spotted_maple_tree/yellow', [
-        'minecraft:forest'
+
     ])
     e.add('kubejs:has_feature/stone_cliff', [
         'natures_spirit:blooming_sugi_forest',

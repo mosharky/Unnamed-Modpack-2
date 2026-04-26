@@ -35,7 +35,7 @@ grass_loot_table_override = true
 #Guardians drop Spongekin Seeds
 spongekin_seeds_guardian = true
 #Show compatibility items in recipe viewers
-show_compat_items_in_recipe_viewers = true
+show_compat_items_in_recipe_viewers = false
 #Add items to vanilla creative tabs
 add_items_to_vanilla_tabs = true
 #Apple trees generate

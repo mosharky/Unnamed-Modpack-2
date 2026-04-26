@@ -323,11 +323,11 @@ function biomeTags_BountifulFares(e) {
     e.add('bountifulfares:has_grassy_dirt_patches', [
         '#minecraft:is_taiga',
         '#natures_spirit:is_alpine',
-        '#natures_spirit:is_autumn',
-        '#natures_spirit:is_frontier',
         '#environmental:is_pine_barrens',
         'atmospheric:laurel_forest',
         'atmospheric:spiny_thicket',
+        'natures_spirit:maple_woodlands',
+        'natures_spirit:fir_forest',
         'nomansland:old_growth_forest',
     ])
 }

@@ -64,6 +64,7 @@ ESM/
 backups/
 Distant_Horizons_server_data/
 emojiful/
+mapwright_maps/
 
 # root files
 knownkeys.txt
@@ -87,6 +88,7 @@ irisUpdateInfo.json
 .qmenu_opened.marker
 snr_favorite_styles.nbt
 servers.dat_old
+imgui.ini
 
 # launcher-related
 .curseclient
@@ -105,6 +107,8 @@ kubejs/_mod_data/
 kubejs/startup_scripts/src/_core/dev.js
 globalresources/excavated_variants/
 
-# assets
+# kubejs loading
 kubejs/assets/*.zip
 !kubejs/assets/special-*.zip
+kubejs/data/*.zip
+!kubejs/data/special-*.zip

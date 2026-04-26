@@ -49,6 +49,7 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_UpgradeAquatic(e)
     // biomeTags_Windswept(e)
     biomeTags_BountifulFares(e)
+    biomeTags_Oreganized(e)
 
     // nml changes need to load way later
     biomeTags_NoMansLand(e)
@@ -67,7 +68,7 @@ ServerEvents.recipes(e => {
     recipes_BrewinAndChewin(e)
     // recipes_Cataclysm(e)
     // recipes_CavernsAndChasms(e)
-    recipes_CreateDeco(e)
+    // recipes_CreateDeco(e)
     // recipes_Embers(e)
     // recipes_Everycomp(e)
     recipes_FarmersDelight(e)

@@ -1,7 +1,7 @@
 {
 	"hotbarScrollSoundEffect": {
 		"pitch": 1.8,
-		"volume": 0.2,
+		"volume": 0.1,
 		"enabledDynamic": true,
 		"id": "hotbarScroll",
 		"soundEvent": "minecraft:block.note_block.hat",

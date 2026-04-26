@@ -51,6 +51,7 @@ function biomeTags_NoMansLand(e) {
         // my filters
         /.*basin/,
         'natures_spirit:tundra',
+        'natures_spirit:white_cliffs',
         e.get('kubejs:has_feature/terracotta_cliff').getObjectIds(),
         e.get('kubejs:has_feature/common_crag_rock/terracotta').getObjectIds(),
         e.get('kubejs:has_feature/crag_rock/travertine').getObjectIds(),

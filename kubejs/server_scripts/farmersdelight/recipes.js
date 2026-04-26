@@ -1,11 +1,15 @@
 /** @param {$RecipesKubeEvent} e */
 function recipes_FarmersDelight(e) {
+
+    // FD dough > create
+    e.recipes.create.splashing('farmersdelight:wheat_dough', 'bountifulfares:flour')
+    e.recipes.create.mixing('farmersdelight:wheat_dough', ['bountifulfares:flour', Fluid.of('minecraft:water', 1000)])
+    e.recipes.create.mixing('farmersdelight:pie_crust', ['3x farmersdelight:wheat_dough', Fluid.of('minecraft:milk', 250)])
+
     e.replaceInput({}, 'farmersdelight:wheat_dough', '#c:foods/dough')
     e.replaceInput({}, 'farmersdelight:rope', 'supplementaries:rope')
     e.replaceOutput({}, 'farmersdelight:rope', 'supplementaries:rope')
 
-    e.remove({ id: 'farmersdelight:bread_from_smelting' })
-    e.remove({ id: 'farmersdelight:bread_from_smoking' })
     e.remove({ id: 'farmersdelight:wheat_dough_from_water' })
 
     // dough / bread instead of wheat

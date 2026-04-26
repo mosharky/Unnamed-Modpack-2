@@ -27,7 +27,7 @@ function postInit() {
     // removals_Cataclysm()
     // removals_CavernsAndChasms()
     // removals_CollectorsReap()
-    removals_CreateDeco()
+    // removals_CreateDeco()
     removals_CreatePowerLoader()
     removals_Darkerdepths()
     removals_DecorativeBlocks()

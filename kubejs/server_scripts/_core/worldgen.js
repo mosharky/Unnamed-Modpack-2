@@ -79,7 +79,7 @@ function structures_Core(e) {
 
     global.STRUCTURE_BLOCK_SWAPPER.forEach((swapMap, structure) => {
         const json = {
-            priority: 1,  // Higher priority value = loads earlier
+            priority: 1,  // Lower priority value = loads later
             structures: structure,
             repaletter: [],
         }
@@ -100,7 +100,7 @@ function structures_Core(e) {
 
     // Replacing minecraft:chest with oak chest by default
     e.json('kubejs:blueprint/structure_repaletters/default_oak_chest', {
-        priority: 2,  // Higher priority value = loads later
+        priority: 2,  // Higher priority value = loads earlier
         structures: '#kubejs:minecraft/has_oak_chest',
         repaletter: [
             {

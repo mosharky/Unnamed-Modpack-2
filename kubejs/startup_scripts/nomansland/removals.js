@@ -12,6 +12,7 @@ function removals_NoMansLand() {
         'nomansland:walnuts',
         'nomansland:raw_venison',
         'nomansland:cooked_venison',
+        'nomansland:oat_grass',
         'nomansdelight:venison_chop',
         'nomansdelight:cooked_venison_chop',
     ])

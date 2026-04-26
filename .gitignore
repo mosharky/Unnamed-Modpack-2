@@ -75,6 +75,7 @@ dynamic-resource-pack-cache/
 moddata/
 moonlight-global-datapacks/
 downloads/
+mapwright_maps/
 
 # root files
 knownkeys.txt
@@ -101,6 +102,7 @@ servers.dat_old
 caxton_impl.dll
 observable_announce
 command_history.txt
+imgui.ini
 
 # dev environment stuff
 .probe/
@@ -120,8 +122,8 @@ minecraftinstance.json
 .unsup-tmp/
 mods/.index/
 
-# packwiz
+# kubejs loading
 kubejs/assets/*.zip
 !kubejs/assets/special-*.zip
-
-.probe
+kubejs/data/*.zip
+!kubejs/data/special-*.zip

@@ -14,6 +14,8 @@ function removals_Quark() {
         'quark:golden_carrot_crate',
         'quark:beetroot_crate',
         'quark:pipe',
+        'quark:iron_rod',,
+        'quark:obsidian_pressure_plate',
     ])
 
     global.ITEM_SWAPPER.set('quark:crab_leg', 'minecraft:cod')

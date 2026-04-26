@@ -202,16 +202,16 @@ function getFeatureJson(modId, featureType, featureId) {
  * @returns {Object} - A would_survive predicate object
  */
 function wouldSurvive(plant) {
-    const Properties = {}
-    if (plant.includes('sapling')) Properties.stage = 0
-    else Properties.age = 0
+    const properties = {}
+    if (plant.includes('sapling')) properties.stage = 0
+    else properties.age = 0
     return {
         type: 'minecraft:block_predicate_filter',
         predicate: {
             type: 'minecraft:would_survive',
             state: {
                 Name: plant,
-                Properties: Properties
+                Properties: properties
             }
         }
     }
