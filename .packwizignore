@@ -66,6 +66,8 @@ Distant_Horizons_server_data/
 emojiful/
 mapwright_maps/
 notepad/
+fieldguide_cache/
+.sable/
 
 # root files
 knownkeys.txt

@@ -146,8 +146,6 @@
 	dynamic_assets_generation_mode = "CACHED"
 	#Disables Optifine warn screen
 	no_optifine_warn_screen = false
-	#Disables Amendments suggestion screen
-	no_amendments_screen = false
 	#Disable incompatible mods warning screen
 	no_incompatible_mods_screen = false
 	#Config button Y offset
@@ -162,6 +160,8 @@
 	custom_configured_screen = true
 	#unfunny
 	"I am very boring and I don't want any Easter Egg" = false
+	#Disables Amendments suggestion screen
+	no_amendments_screen = false
 
 #Game tweaks
 [tweaks]

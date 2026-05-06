@@ -77,6 +77,8 @@ moonlight-global-datapacks/
 downloads/
 mapwright_maps/
 notepad/
+fieldguide_cache/
+.sable/
 
 # root files
 knownkeys.txt

@@ -108,7 +108,11 @@
         "**/mapwright_maps/": true,
         "**/imgui.ini": true,
         "kubejs/data/*.zip": true,
-        "kubejs/data/special-*.zip": false
+        "kubejs/data/special-*.zip": false,
+        "**/notepad/": true,
+        "**/fieldguide_cache/": true,
+        "**/.sable/": true,
+        "**/ponders_watched.json": true
     },
     "typescript.tsserver.maxTsServerMemory": 4096,
     "typescript.disableAutomaticTypeAcquisition": true,

@@ -52,11 +52,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "treechop": {
-    "plugin": true,
-    "show_tree_block_counts": true,
-    "show_num_chops_remaining": true
-  },
   "jadeaddons": {
     "equipment_requirement": ""
   },
@@ -98,25 +93,11 @@
   "corpse": {
     "corpse": true
   },
-  "iceandfire": {
-    "dragon_egg_entity": true,
-    "multipart": true,
-    "dragon_egg_block": true,
-    "dragon": true
+  "item_descriptions": {
+    "block_descriptions": false,
+    "entity_descriptions": true
   },
   "balm": {
     "jade": true
-  },
-  "ae2": {
-    "part_icon": true,
-    "charger": true,
-    "debug": true,
-    "part_tooltip": true,
-    "grid_node_state": true,
-    "pattern_provider": true,
-    "part_mod_name": true,
-    "power_storage": true,
-    "crafting_monitor": true,
-    "part_name": true
   }
 }
