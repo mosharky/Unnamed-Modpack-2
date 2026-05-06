@@ -1,0 +1,22 @@
+{
+  "filter": {
+    "type": "and",
+    "filters": [
+      {
+        "type": "or",
+        "filters": [
+          "ground_type@excavated_variants:overworld",
+          "ground_type@excavated_variants:nether",
+          "ground_type@excavated_variants:end",
+          "ground_type@excavated_variants:mysticalagriculture/soul"
+        ]
+      },
+      "generated"
+    ]
+  },
+  "tags": [
+    "minecraft:block/mineable/pickaxe",
+    "c:block/ores",
+    "c:item/ores"
+  ]
+}

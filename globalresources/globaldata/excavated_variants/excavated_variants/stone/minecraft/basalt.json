@@ -1,0 +1,12 @@
+{
+  "types": [
+    "excavated_variants:nether"
+  ],
+  "translations": {
+    "en_us": "Basalt"
+  },
+  "block": "minecraft:basalt",
+  "ore_tags": [
+    "c:ores_in_ground/basalt"
+  ]
+}

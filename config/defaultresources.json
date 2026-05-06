@@ -1,7 +1,7 @@
 // Set extraction to "extract" to extract currently unextracted resources.
 {
   "extract": {
-    "excavated_variants": "extract"
+    "excavated_variants": "extracted"
   },
   "from_resource_packs": {}
 }
