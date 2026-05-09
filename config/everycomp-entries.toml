@@ -83,10 +83,6 @@
 			darkslate = true
 			grimestone = true
 
-		[types.stone_type.pastel]
-			blackslag = true
-			preservation_stone = true
-
 		[types.stone_type.enderscape]
 			mirestone = true
 			veradite = true
@@ -132,33 +128,10 @@
 		[types.wood_type.mynethersdelight]
 			powdery = true
 
-		[types.wood_type.gardens_of_the_dead]
-			whistlecane = true
-			soulblight = true
-
 		[types.wood_type.quark]
 			azalea = false
 			ancient = false
 			blossom = false
-
-		[types.wood_type.pastel]
-			black = true
-			blue = true
-			brown = true
-			cyan = true
-			gray = true
-			green = true
-			light_blue = true
-			light_gray = true
-			lime = true
-			magenta = true
-			orange = true
-			pink = true
-			purple = true
-			red = true
-			white = true
-			yellow = true
-			weeping_gala = true
 
 		[types.wood_type.bountifulfares]
 			hoary = true
@@ -230,27 +203,6 @@
 			orange_blossom = false
 			yellow_blossom = false
 			red_blossom = false
-
-		[types.leaves_type.pastel]
-			weeping_gala = true
-			nephrite_blossom = true
-			spirit_sallow = true
-			black = true
-			blue = true
-			brown = true
-			cyan = true
-			gray = true
-			green = true
-			light_blue = true
-			light_gray = true
-			lime = true
-			magenta = true
-			orange = true
-			pink = true
-			purple = true
-			red = true
-			white = true
-			yellow = true
 
 		[types.leaves_type.bountifulfares]
 			apple = true

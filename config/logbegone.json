@@ -1,0 +1,13 @@
+{
+  "logbegone": {
+    "phrases": [
+      "Disconnecting VANILLA connection attempt",
+      "Channels ",
+      "Couldn't load model excavated_variants"
+    ],
+    "regex": [
+      "Disconnecting VANILLA connection attempt",
+      "Channels "
+    ]
+  }
+}

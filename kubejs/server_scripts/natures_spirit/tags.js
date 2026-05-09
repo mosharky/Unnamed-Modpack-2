@@ -25,11 +25,15 @@ function biomeTags_NaturesSpirit(e) {
         'natures_spirit:dusty_slopes',
         'natures_spirit:scorched_dunes',
         'natures_spirit:sleeted_slopes',
+        'natures_spirit:woody_highlands',
+        'natures_spirit:chaparral',
     ])
 
     // NS Features
     e.add('kubejs:has_feature/natures_spirit_small_larch', [
-        'windswept:pine_barrens'
+        'windswept:pine_barrens',
+        'environmental:pine_barrens',
+        'environmental:old_growth_pine_barrens',
     ])
     e.add('kubejs:has_feature/natures_spirit_rooted_desert_turnip', [
         '#atmospheric:is_dunes',
@@ -37,11 +41,14 @@ function biomeTags_NaturesSpirit(e) {
         'atmospheric:scrubland',
     ])
     e.add('kubejs:has_feature/natures_spirit_noise_fir', [
-        'windswept:pine_barrens'
+        'windswept:pine_barrens',
+        'environmental:pine_barrens',
     ])
     e.add('kubejs:has_feature/natures_spirit_sparse_frosty_fir', [
         'windswept:snowy_pine_barrens',
         'windswept:snowy_chestnut_forest',
+        'environmental:snowy_pine_barrens',
+        'minecraft:grove'
     ])
     e.add('kubejs:has_feature/natures_spirit_succulent', [
         'atmospheric:flourishing_dunes',

@@ -3,10 +3,10 @@
     "excavated_variants:overworld"
   ],
   "translations": {
-    "en_us": "Asurine"
+    "en_us": "Travertine"
   },
-  "block": "create:asurine",
+  "block": "natures_spirit:travertine",
   "ore_tags": [
-    "c:ores_in_ground/asurine"
+    "c:ores_in_ground/travertine"
   ]
 }

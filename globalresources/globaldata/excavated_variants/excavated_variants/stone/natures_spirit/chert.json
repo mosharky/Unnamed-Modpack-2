@@ -3,10 +3,10 @@
     "excavated_variants:overworld"
   ],
   "translations": {
-    "en_us": "Ochrum"
+    "en_us": "Chert"
   },
-  "block": "create:ochrum",
+  "block": "natures_spirit:chert",
   "ore_tags": [
-    "c:ores_in_ground/ochrum"
+    "c:ores_in_ground/chert"
   ]
 }

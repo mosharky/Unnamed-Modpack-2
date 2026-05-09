@@ -4,8 +4,8 @@ function worldgen_NaturesSpirit(e) {
     removeFeatures(e, 'natures_spirit:cattails_placed', '#minecraft:is_overworld', VEGETAL_DECORATION)
 
     // replace maple tree features in NS biomes
-    removeFeatures(e, 'natures_spirit:maple2_placed', 'natures_spirit:maple_woodlands', VEGETAL_DECORATION)
     removeFeatures(e, 'natures_spirit:maple_placed', ['natures_spirit:golden_wilds', 'natures_spirit:marigold_meadows'], VEGETAL_DECORATION)
+    removeFeatures(e, 'natures_spirit:maple2_placed', 'natures_spirit:maple_woodlands', VEGETAL_DECORATION)
     addFeatures(e, registerFeature(e, PLACED, 'kubejs:maple_forest_trees', {
         feature: 'autumnity:maple_forest_trees',
         placement: [
@@ -29,14 +29,10 @@ function worldgen_NaturesSpirit(e) {
         feature: 'autumnity:pumpkin_fields_trees',
         placement: [
             {
-                type: 'minecraft:count',
-                count: {
-                    type: 'minecraft:weighted_list',
-                    distribution: [
-                        { data: 2, weight: 4 },
-                        { data: 3, weight: 1 }
-                    ]
-                }
+                type: 'minecraft:noise_based_count',
+                noise_factor: 100,
+                noise_offset: 0,
+                noise_to_count_ratio: 3
             },
             { type: 'minecraft:in_square' },
             { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
@@ -139,6 +135,16 @@ function worldgen_NaturesSpirit(e) {
     // Remove Azolla in swamp and marsh (i want them in tropical biomes only)
     removeFeatures(e, 'natures_spirit:patch_azolla', ['natures_spirit:marsh', 'minecraft:swamp'], VEGETAL_DECORATION)
     // addFeatures(e, copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:patch_azolla'), '#kubejs:has_feature/natures_spirit_azolla', VEGETAL_DECORATION)
+
+    // plains biome tree overhaul
+    removeFeatures(e, 'minecraft:trees_plains', ['minecraft:plains', 'minecraft:sunflower_plains'], VEGETAL_DECORATION)
+    addFeatures(e, [
+        //copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:trees_oak_savanna'),
+        copyPasteFeature(e, 'natures_spirit', PLACED, 'natures_spirit:trees_oak_savanna_2'),
+    ], ['minecraft:plains', 'minecraft:sunflower_plains'], VEGETAL_DECORATION)
+
+    // remove lush ferns from snowy redwood bc it looks like ass tbh
+    removeFeatures(e, 'natures_spirit:patch_lush_fern', 'natures_spirit:snowy_redwood_forest', VEGETAL_DECORATION)
 
     /* https://github.com/Team-Hibiscus/NatureSpiritForge/blob/1.20.1/src/main/java/net/hibiscus/naturespirit/world/NSSurfaceRules.java
     Replacing pink sand with 'atmospheric:red_arid_sand' as a surface rule

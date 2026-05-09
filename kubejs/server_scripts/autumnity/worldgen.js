@@ -22,10 +22,6 @@ function worldgen_Autumnity(e) {
     )
 
     // Maple tree amalgamations
-    // Remove Autumnity trees from vanilla worldgen
-    removeBiomeModifier(e, 'autumnity:add_feature/maple_tree')
-    removeBiomeModifier(e, 'autumnity:add_feature/orange_spotted_maple_tree')
-    removeBiomeModifier(e, 'autumnity:add_feature/red_orange_spotted_maple_tree')
     // Nature's Spirit maple tree with NML maple log and Autumnity leaves
     const mapleTreeJson = {
         type: 'minecraft:tree',
@@ -74,7 +70,7 @@ function worldgen_Autumnity(e) {
                 },
                 branch_end_offset_from_top: {
                     type: 'minecraft:uniform',
-                    max_inclusive: -1, 
+                    max_inclusive: -1,
                     min_inclusive: -4
                 },
                 branch_horizontal_length: {
@@ -82,9 +78,9 @@ function worldgen_Autumnity(e) {
                     max_inclusive: 3,
                     min_inclusive: 1
                 },
-                branch_start_offset_from_top: { 
-                    max_inclusive: -4, 
-                    min_inclusive: -5 
+                branch_start_offset_from_top: {
+                    max_inclusive: -4,
+                    min_inclusive: -5
                 }
             },
             trunk_provider: {
@@ -99,18 +95,16 @@ function worldgen_Autumnity(e) {
 
     const mapleColors = ['', 'orange', 'yellow', 'red']
     mapleColors.forEach(color => {
-        mapleTreeJson.config.foliage_provider.state.Name = `autumnity:${color != '' ? color + '_' : ''}maple_leaves`
-        registerFeature(e, CONFIGURED, `kubejs:${color != '' ? color + '_' : ''}maple_tree`, mapleTreeJson)
-        registerFeature(e, CONFIGURED, `autumnity:${color != '' ? color + '_' : ''}maple_tree`, mapleTreeJson)
+        const prefix = color != '' ? `${color}_` : ''
+        mapleTreeJson.config.decorators = []
+        mapleTreeJson.config.foliage_provider.state.Name = `autumnity:${prefix}maple_leaves`
+        registerFeature(e, CONFIGURED, `autumnity:${prefix}maple_tree`, mapleTreeJson)
         mapleTreeJson.config.decorators = [{ type: 'minecraft:beehive', probability: 0.002 }]
-        registerFeature(e, CONFIGURED, `kubejs:${color != '' ? color + '_' : ''}maple_tree_bees_0002`, mapleTreeJson)
-        registerFeature(e, CONFIGURED, `autumnity:${color != '' ? color + '_' : ''}maple_tree_bees_0002`, mapleTreeJson)
+        registerFeature(e, CONFIGURED, `autumnity:${prefix}maple_tree_bees_0002`, mapleTreeJson)
         mapleTreeJson.config.decorators = [{ type: 'minecraft:beehive', probability: 0.02 }]
-        registerFeature(e, CONFIGURED, `kubejs:${color != '' ? color + '_' : ''}maple_tree_bees_002`, mapleTreeJson)
-        registerFeature(e, CONFIGURED, `autumnity:${color != '' ? color + '_' : ''}maple_tree_bees_002`, mapleTreeJson)
+        registerFeature(e, CONFIGURED, `autumnity:${prefix}maple_tree_bees_002`, mapleTreeJson)
         mapleTreeJson.config.decorators = [{ type: 'minecraft:beehive', probability: 0.05 }]
-        registerFeature(e, CONFIGURED, `kubejs:${color != '' ? color + '_' : ''}maple_tree_bees_005`, mapleTreeJson)
-        registerFeature(e, CONFIGURED, `autumnity:${color != '' ? color + '_' : ''}maple_tree_bees_005`, mapleTreeJson)
+        registerFeature(e, CONFIGURED, `autumnity:${prefix}maple_tree_bees_005`, mapleTreeJson)
         if (color != '') {
             mapleTreeJson.config.decorators = [
                 {
@@ -120,7 +114,7 @@ function worldgen_Autumnity(e) {
                     provider: {
                         type: 'minecraft:simple_state_provider',
                         state: {
-                            Name: `autumnity:${color}_maple_leaf_pile`,
+                            Name: `autumnity:${prefix}maple_leaf_pile`,
                             Properties: {
                                 down: 'true',
                                 east: 'false',
@@ -135,40 +129,42 @@ function worldgen_Autumnity(e) {
                 },
                 { type: 'minecraft:beehive', probability: 0.002 }
             ]
-            registerFeature(e, CONFIGURED, `kubejs:${color}_maple_tree_fallen_leaves_bees_0002`, mapleTreeJson)
-            registerFeature(e, CONFIGURED, `autumnity:${color}_maple_tree_fallen_leaves_bees_0002`, mapleTreeJson)
+            registerFeature(e, CONFIGURED, `autumnity:${prefix}maple_tree_fallen_leaves_bees_0002`, mapleTreeJson)
             mapleTreeJson.config.decorators[1] = { type: 'minecraft:beehive', probability: 0.02 }
-            registerFeature(e, CONFIGURED, `kubejs:${color}_maple_tree_fallen_leaves_bees_002`, mapleTreeJson)
-            registerFeature(e, CONFIGURED, `autumnity:${color}_maple_tree_fallen_leaves_bees_002`, mapleTreeJson)
-
-            // Adding maple trees to vanilla biomes, same as Autumnity did
-            addFeatures(e, spottedPlacedFeature(e, `kubejs:${color}_maple_tree_fallen_leaves_bees_0002`, `autumnity:${color}_maple_sapling`), `#kubejs:has_feature/spotted_maple_tree/${color}`, VEGETAL_DECORATION)
+            registerFeature(e, CONFIGURED, `autumnity:${prefix}maple_tree_fallen_leaves_bees_002`, mapleTreeJson)
         }
     })
 
-    // Sparse green maple tree placement
-    addFeatures(e,
-        registerFeature(e, PLACED, 'kubejs:sparse_maple_tree', {
-            feature: 'kubejs:maple_tree_bees_0002',
-            placement: [
-                {
-                    type: 'minecraft:count',
-                    count: {
-                        type: 'minecraft:weighted_list',
-                        distribution: [
-                            { data: 1, weight: 9 },
-                            { data: 2, weight: 1 }
-                        ]
-                    }
-                },
-                { type: 'minecraft:in_square' },
-                { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
-                { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
-                { type: 'minecraft:biome' },
-                wouldSurvive('autumnity:maple_sapling')
-            ]
-        }),
-        '#kubejs:has_feature/sparse_maple_tree',
-        VEGETAL_DECORATION
-    )
+    registerFeature(e, PLACED, 'autumnity:spotted_maples_red', {
+        feature: 'autumnity:red_maple_tree_fallen_leaves_bees_0002',
+        placement: [
+            {
+                type: 'blueprint:better_noise_based_count',
+                noise: 'autumnity:spotted_maples',
+                noise_offset: -0.4000000059604645,
+                noise_to_count_ratio: 1
+            },
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+            { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+            { type: 'minecraft:biome' },
+            wouldSurvive('natures_spirit:red_maple_sapling')
+        ]
+    })
+    registerFeature(e, PLACED, 'autumnity:spotted_maples_orange', {
+        feature: 'autumnity:orange_maple_tree_fallen_leaves_bees_0002',
+        placement: [
+            {
+                type: 'blueprint:better_noise_based_count',
+                noise: 'autumnity:spotted_maples',
+                noise_offset: -0.4000000059604645,
+                noise_to_count_ratio: 1
+            },
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:surface_water_depth_filter', max_water_depth: 0 },
+            { type: 'minecraft:heightmap', heightmap: 'OCEAN_FLOOR' },
+            { type: 'minecraft:biome' },
+            wouldSurvive('natures_spirit:orange_maple_sapling')
+        ]
+    })
 }

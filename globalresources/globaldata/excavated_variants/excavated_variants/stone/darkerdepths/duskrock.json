@@ -1,0 +1,12 @@
+{
+  "types": [
+    "excavated_variants:overworld"
+  ],
+  "translations": {
+    "en_us": "Duskrock"
+  },
+  "block": "darkerdepths:duskrock",
+  "ore_tags": [
+    "c:ores_in_ground/duskrock"
+  ]
+}

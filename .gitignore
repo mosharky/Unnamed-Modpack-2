@@ -79,6 +79,7 @@ mapwright_maps/
 notepad/
 fieldguide_cache/
 .sable/
+debug/
 
 # root files
 knownkeys.txt
@@ -131,3 +132,5 @@ kubejs/assets/*.zip
 !kubejs/assets/special-*.zip
 kubejs/data/*.zip
 !kubejs/data/special-*.zip
+
+.probe

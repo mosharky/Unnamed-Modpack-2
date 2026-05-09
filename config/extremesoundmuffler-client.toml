@@ -24,7 +24,7 @@
 	showTip = true
 	#Whether or not use the dark theme
 	#Default: false
-	useDarkTheme = false
+	useDarkTheme = true
 
 #Inventory button settings
 [inventory_button]

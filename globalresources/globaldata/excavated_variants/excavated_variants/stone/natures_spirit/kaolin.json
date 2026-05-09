@@ -3,10 +3,10 @@
     "excavated_variants:overworld"
   ],
   "translations": {
-    "en_us": "Veridium"
+    "en_us": "Kaolin"
   },
-  "block": "create:veridium",
+  "block": "natures_spirit:kaolin",
   "ore_tags": [
-    "c:ores_in_ground/veridium"
+    "c:ores_in_ground/kaolin"
   ]
 }

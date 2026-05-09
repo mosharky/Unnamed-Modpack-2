@@ -21,6 +21,7 @@ function worldgen_NoMansLand(e) {
     removeBiomeModifier(e, 'nomansland:add_patch_hearty_succulent')
     removeBiomeModifier(e, 'nomansland:add_patch_succulent_normal')
     removeBiomeModifier(e, 'nomansland:add_patch_dried_grass_mycelium')
+    removeBiomeModifier(e, 'nomansland:add_crag_rock')
     // vanilla biome changes
     removeBiomeModifier(e, 'nomansland:birch_forest/change_color')
     removeBiomeModifier(e, 'nomansland:birch_forest/remove_features')
@@ -33,11 +34,11 @@ function worldgen_NoMansLand(e) {
     removeBiomeModifier(e, 'nomansland:savanna/remove_features')
     removeBiomeModifier(e, 'nomansland:savanna_plateau/change_color')
     removeBiomeModifier(e, 'nomansland:savanna_plateau/remove_features')
-    removeBiomeModifier(e, 'nomansland:snowy_taiga/change_color')
     removeBiomeModifier(e, 'nomansland:windswept_savanna/change_color')
     removeBiomeModifier(e, 'nomansland:windswept_savanna/remove_features')
 
     // snowy taiga would have the same effects as grove
+    removeBiomeModifier(e, 'nomansland:snowy_taiga/change_color')
     e.json('kubejs:lithostitched/worldgen_modifier/replace_effects/snowy_taiga', {
         type: 'lithostitched:replace_effects',
         biomes: 'minecraft:snowy_taiga',
@@ -54,6 +55,16 @@ function worldgen_NoMansLand(e) {
     // keep new flowers
     removeBiomeModifier(e, 'nomansland:sunflower_plains/remove_features')
     removeFeatures(e, 'nomansland:flower_patches/flowers_sunflower_plains', 'minecraft:sunflower_plains', VEGETAL_DECORATION)
+    // seperate grass sprouts feature
+    removeBiomeModifier(e, 'nomansland:add_feature_addition/has_overworld_foliage_tag_features')
+    addFeatures(e, [
+        'nomansland:patch_roots',
+        'nomansland:patch_cattail',
+        'nomansland:patch_reeds',
+        'nomansland:patch_waterlily_common'
+    ], '#nomansland:feature_addition/has_overworld_foliage', VEGETAL_DECORATION)
+    addFeatures(e, 'nomansland:patch_grass_sprouts_normal', '#kubejs:has_feature/grass_sprouts', VEGETAL_DECORATION)
+
 
     // Pine replacement
     const pine = getFeatureJson('environmental', CONFIGURED, 'environmental:pine')
@@ -107,13 +118,6 @@ function worldgen_NoMansLand(e) {
     registerFeature(e, CONFIGURED, 'nomansland:walnut', walnut)
 
     // Integrating features
-    // Crag rocks
-    addFeatures(e, registerCommonCragRock(e, 'minecraft:terracotta', 'minecraft:dirt', 'minecraft:grass_block'), '#kubejs:has_feature/common_crag_rock/terracotta', LOCAL_MODIFICATIONS)
-    addFeatures(e, registerBasicCragRock(e, 'minecraft:andesite', 'minecraft:dirt', 'minecraft:grass_block'), '#kubejs:has_feature/crag_rock/andesite', RAW_GENERATION)
-    addFeatures(e, registerBasicCragRock(e, 'minecraft:granite', 'minecraft:dirt', 'minecraft:grass_block'), '#kubejs:has_feature/crag_rock/granite', RAW_GENERATION)
-    addFeatures(e, registerBasicCragRock(e, 'natures_spirit:travertine', 'minecraft:dirt', 'minecraft:grass_block'), '#kubejs:has_feature/crag_rock/travertine', RAW_GENERATION)
-    addFeatures(e, registerBasicCragRock(e, 'natures_spirit:kaolin', 'minecraft:dirt', 'minecraft:grass_block'), '#kubejs:has_feature/crag_rock/kaolin', RAW_GENERATION)
-    addFeatures(e, registerBasicCragRock(e, 'natures_spirit:chert', 'minecraft:dirt', 'minecraft:grass_block'), '#kubejs:has_feature/crag_rock/chert', RAW_GENERATION)
     // Flora
     // lavender biome features
     addFeatures(e, [
@@ -124,391 +128,71 @@ function worldgen_NoMansLand(e) {
 
 
     // replace oak apple trees with NS/vanilla version
-    registerFeature(e, PLACED, 'nomansland:fancy_oak_apple_01', {
-        feature: 'minecraft:fancy_oak',
-        placement: [wouldSurvive('minecraft:oak_sapling')]
-    })
-    registerFeature(e, PLACED, 'nomansland:fancy_oak_apple_005', {
-        feature: 'minecraft:fancy_oak',
-        placement: [wouldSurvive('minecraft:oak_sapling')]
-    })
-    registerFeature(e, PLACED, 'nomansland:oak_apple_01', {
-        feature: 'minecraft:oak',
-        placement: [wouldSurvive('minecraft:oak_sapling')]
-    })
-    registerFeature(e, PLACED, 'nomansland:oak_apple_005', {
-        feature: 'minecraft:oak',
-        placement: [wouldSurvive('minecraft:oak_sapling')]
-    })
+    registerFeature(e, PLACED, 'nomansland:fancy_oak_apple_01', { feature: 'minecraft:fancy_oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
+    registerFeature(e, PLACED, 'nomansland:fancy_oak_apple_005', { feature: 'minecraft:fancy_oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
+    registerFeature(e, PLACED, 'nomansland:oak_apple_01', { feature: 'minecraft:oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
+    registerFeature(e, PLACED, 'nomansland:oak_apple_005', { feature: 'minecraft:oak', placement: [wouldSurvive('minecraft:oak_sapling')] })
 
-    // remove maple trees
+    // remove maple & replace pine with fir
     registerFeature(e, CONFIGURED, 'nomansland:biome_trees/trees_snowy_taiga', {
         type: 'minecraft:random_selector',
         config: {
             default: 'minecraft:spruce_checked',
             features: [
                 { chance: 0.2, feature: 'minecraft:pine_checked' },
-                { chance: 0.2, feature: 'nomansland:pine_checked' },
-                { chance: 0.1, feature: 'nomansland:frosted_pine_checked' },
+                { chance: 0.2, feature: 'natures_spirit:fir_checked' },
+                { chance: 0.1, feature: 'natures_spirit:frosty_fir_checked' },
                 { chance: 0.05, feature: 'nomansland:frosted_spruce_checked' },
                 { chance: 0.05, feature: 'nomansland:frosted_spruce_alt_checked' }
             ]
         }
     })
 
-
-    // ⚠️ NML changes vanilla configured features. why!!!!!!!!!!
-    // remove maple
-    registerFeature(e, CONFIGURED, 'minecraft:trees_taiga', {
-        type: 'minecraft:random_selector',
+    // environmental duckweed placement for NML
+    registerFeature(e, CONFIGURED, 'nomansland:patch_duckweed', {
+        type: 'minecraft:random_patch',
         config: {
-            default: 'minecraft:spruce_checked',
-            features: [
-                { chance: 0.33333334, feature: 'minecraft:pine_checked' },
-                { chance: 0.2, feature: 'nomansland:pine_checked' }
-            ]
+            feature: {
+                feature: {
+                    type: 'minecraft:simple_block',
+                    config: {
+                        to_place: {
+                            type: 'minecraft:simple_state_provider',
+                            state: { Name: 'nomansland:duckweed' }
+                        }
+                    }
+                },
+                placement: [
+                    {
+                        type: 'minecraft:block_predicate_filter',
+                        predicate: {
+                            type: 'minecraft:matching_blocks',
+                            blocks: 'minecraft:air'
+                        }
+                    }
+                ]
+            },
+            tries: 1024,
+            xz_spread: 8,
+            y_spread: 5
         }
     })
-
-    // revert cherry trees to vanilla shape
-    registerFeature(e, CONFIGURED, 'minecraft:cherry_bees_005', {
-        type: 'minecraft:tree',
-        config: {
-            decorators: [
-                { type: 'minecraft:beehive', probability: 0.05 }
-            ],
-            dirt_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: { Name: 'minecraft:dirt' }
-            },
-            foliage_placer: {
-                type: 'minecraft:cherry_foliage_placer',
-                corner_hole_chance: 0.25,
-                hanging_leaves_chance: 0.16666667,
-                hanging_leaves_extension_chance: 0.33333334,
-                height: 5,
-                offset: 0,
-                radius: 4,
-                wide_bottom_layer_hole_chance: 0.25
-            },
-            foliage_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:cherry_leaves',
-                    Properties: {
-                        distance: '7',
-                        persistent: 'false',
-                        waterlogged: 'false'
-                    }
-                }
-            },
-            force_dirt: false,
-            ignore_vines: true,
-            minimum_size: {
-                type: 'minecraft:two_layers_feature_size',
-                limit: 1,
-                lower_size: 0,
-                upper_size: 2
-            },
-            trunk_placer: {
-                type: 'minecraft:cherry_trunk_placer',
-                base_height: 7,
-                branch_count: {
+    registerFeature(e, PLACED, 'nomansland:patch_duckweed', {
+        feature: 'nomansland:patch_duckweed',
+        placement: [
+            {
+                type: 'minecraft:count',
+                count: {
                     type: 'minecraft:weighted_list',
                     distribution: [
-                        { data: 1, weight: 1 },
-                        { data: 2, weight: 1 },
-                        { data: 3, weight: 1 }
+                        { data: 0, weight: 3 },
+                        { data: 1, weight: 1 }
                     ]
-                },
-                branch_end_offset_from_top: { type: 'minecraft:uniform', max_inclusive: 0, min_inclusive: -1 },
-                branch_horizontal_length: { type: 'minecraft:uniform', max_inclusive: 4, min_inclusive: 2 },
-                branch_start_offset_from_top: { max_inclusive: -3, min_inclusive: -4 },
-                height_rand_a: 1,
-                height_rand_b: 0
-            },
-            trunk_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:cherry_log',
-                    Properties: { axis: 'y' }
-                }
-            }
-        }
-    })
-    registerFeature(e, CONFIGURED, 'minecraft:cherry', {
-        type: 'minecraft:tree',
-        config: {
-            decorators: [],
-            dirt_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: { Name: 'minecraft:dirt' }
-            },
-            foliage_placer: {
-                type: 'minecraft:cherry_foliage_placer',
-                corner_hole_chance: 0.25,
-                hanging_leaves_chance: 0.16666667,
-                hanging_leaves_extension_chance: 0.33333334,
-                height: 5,
-                offset: 0,
-                radius: 4,
-                wide_bottom_layer_hole_chance: 0.25
-            },
-            foliage_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:cherry_leaves',
-                    Properties: {
-                        distance: '7',
-                        persistent: 'false',
-                        waterlogged: 'false'
-                    }
                 }
             },
-            force_dirt: false,
-            ignore_vines: true,
-            minimum_size: {
-                type: 'minecraft:two_layers_feature_size',
-                limit: 1,
-                lower_size: 0,
-                upper_size: 2
-            },
-            trunk_placer: {
-                type: 'minecraft:cherry_trunk_placer',
-                base_height: 7,
-                branch_count: {
-                    type: 'minecraft:weighted_list',
-                    distribution: [
-                        { data: 1, weight: 1 },
-                        { data: 2, weight: 1 },
-                        { data: 3, weight: 1 }
-                    ]
-                },
-                branch_end_offset_from_top: { type: 'minecraft:uniform', max_inclusive: 0, min_inclusive: -1 },
-                branch_horizontal_length: { type: 'minecraft:uniform', max_inclusive: 4, min_inclusive: 2 },
-                branch_start_offset_from_top: { max_inclusive: -3, min_inclusive: -4 },
-                height_rand_a: 1,
-                height_rand_b: 0
-            },
-            trunk_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:cherry_log',
-                    Properties: { axis: 'y' }
-                }
-            }
-        }
-    })
-
-    // remove fruit leaves decorator from oak trees
-    registerFeature(e, CONFIGURED, 'minecraft:oak_bees_002', {
-        type: 'minecraft:tree',
-        config: {
-            decorators: [
-                { type: 'minecraft:beehive', probability: 0.02 },
-            ],
-            dirt_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: { Name: 'minecraft:dirt' }
-            },
-            foliage_placer: {
-                type: 'minecraft:blob_foliage_placer',
-                height: 3,
-                offset: 0,
-                radius: 2
-            },
-            foliage_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_leaves',
-                    Properties: {
-                        distance: '7',
-                        persistent: 'false',
-                        waterlogged: 'false'
-                    }
-                }
-            },
-            force_dirt: false,
-            ignore_vines: true,
-            minimum_size: {
-                type: 'minecraft:two_layers_feature_size',
-                limit: 1,
-                lower_size: 0,
-                upper_size: 1
-            },
-            trunk_placer: {
-                type: 'minecraft:straight_trunk_placer',
-                base_height: 5,
-                height_rand_a: 2,
-                height_rand_b: 0
-            },
-            trunk_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_log',
-                    Properties: { axis: 'y' }
-                }
-            }
-        }
-    })
-    registerFeature(e, CONFIGURED, 'minecraft:oak_bees_0002', {
-        type: 'minecraft:tree',
-        config: {
-            decorators: [
-                { type: 'minecraft:beehive', probability: 0.002 },
-            ],
-            dirt_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: { Name: 'minecraft:dirt' }
-            },
-            foliage_placer: {
-                type: 'minecraft:blob_foliage_placer',
-                height: 3,
-                offset: 0,
-                radius: 2
-            },
-            foliage_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_leaves',
-                    Properties: {
-                        distance: '7',
-                        persistent: 'false',
-                        waterlogged: 'false'
-                    }
-                }
-            },
-            force_dirt: false,
-            ignore_vines: true,
-            minimum_size: {
-                type: 'minecraft:two_layers_feature_size',
-                limit: 1,
-                lower_size: 0,
-                upper_size: 1
-            },
-            trunk_placer: {
-                type: 'minecraft:straight_trunk_placer',
-                base_height: 5,
-                height_rand_a: 2,
-                height_rand_b: 0
-            },
-            trunk_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_log',
-                    Properties: { axis: 'y' }
-                }
-            }
-        }
-    })
-    registerFeature(e, CONFIGURED, 'minecraft:oak_bees_005', {
-        type: 'minecraft:tree',
-        config: {
-            decorators: [
-                { type: 'minecraft:beehive', probability: 0.05 },
-            ],
-            dirt_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: { Name: 'minecraft:dirt' }
-            },
-            foliage_placer: {
-                type: 'minecraft:blob_foliage_placer',
-                height: 3,
-                offset: 0,
-                radius: 2
-            },
-            foliage_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_leaves',
-                    Properties: {
-                        distance: '7',
-                        persistent: 'false',
-                        waterlogged: 'false'
-                    }
-                }
-            },
-            force_dirt: false,
-            ignore_vines: true,
-            minimum_size: {
-                type: 'minecraft:two_layers_feature_size',
-                limit: 1,
-                lower_size: 0,
-                upper_size: 1
-            },
-            trunk_placer: {
-                type: 'minecraft:straight_trunk_placer',
-                base_height: 5,
-                height_rand_a: 2,
-                height_rand_b: 0
-            },
-            trunk_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_log',
-                    Properties: { axis: 'y' }
-                }
-            }
-        }
-    })
-    registerFeature(e, CONFIGURED, 'minecraft:oak', {
-        type: 'minecraft:tree',
-        config: {
-            decorators: [],
-            dirt_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: { Name: 'minecraft:dirt' }
-            },
-            foliage_placer: {
-                type: 'minecraft:blob_foliage_placer',
-                height: 3,
-                offset: 0,
-                radius: 2
-            },
-            foliage_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_leaves',
-                    Properties: {
-                        distance: '7',
-                        persistent: 'false',
-                        waterlogged: 'false'
-                    }
-                }
-            },
-            force_dirt: false,
-            ignore_vines: true,
-            minimum_size: {
-                type: 'minecraft:two_layers_feature_size',
-                limit: 1,
-                lower_size: 0,
-                upper_size: 1
-            },
-            trunk_placer: {
-                type: 'minecraft:straight_trunk_placer',
-                base_height: 5,
-                height_rand_a: 2,
-                height_rand_b: 0
-            },
-            trunk_provider: {
-                type: 'minecraft:simple_state_provider',
-                state: {
-                    Name: 'minecraft:oak_log',
-                    Properties: { axis: 'y' }
-                }
-            }
-        }
-    })
-
-    // add frosty fir trees to groves
-    registerFeature(e, CONFIGURED, 'minecraft:trees_grove', {
-        type: 'minecraft:random_selector',
-        config: {
-            default: 'nomansland:frosted_spruce_checked',
-            features: [
-                { chance: 0.33, feature: 'nomansland:frosted_spruce_alt_checked' },
-                { chance: 0.1, feature: 'natures_spirit:frosty_fir_checked' }
-            ]
-        }
+            { type: 'minecraft:in_square' },
+            { type: 'minecraft:heightmap', heightmap: 'WORLD_SURFACE_WG' },
+            { type: 'minecraft:biome' }
+        ]
     })
 }

@@ -36,4 +36,22 @@ function biomeTags_Autumnity(e) {
         'natures_spirit:golden_wilds',
         'natures_spirit:maple_woodlands'
     ])
+
+    // TODO more maple tree biomes
+    e.add('autumnity:has_feature/maple_tree', [
+        'minecraft:forest',
+        'minecraft:windswept_forest',
+        'minecraft:flower_forest'
+    ])
+    e.add('autumnity:has_feature/orange_spotted_maple_tree', [
+        'minecraft:dark_forest',
+        'windswept:chestnut_forest',
+        'windswept:snowy_chestnut_forest'
+    ])
+    e.add('autumnity:has_feature/red_spotted_maple_tree', [
+        'minecraft:taiga',
+        'minecraft:windswept_forest',
+        'windswept:pine_barrens',
+        'windswept:snowy_pine_barrens'
+    ])
 }

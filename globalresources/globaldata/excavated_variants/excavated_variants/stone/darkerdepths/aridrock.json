@@ -3,10 +3,10 @@
     "excavated_variants:overworld"
   ],
   "translations": {
-    "en_us": "Limestone"
+    "en_us": "Aridrock"
   },
-  "block": "create:limestone",
+  "block": "darkerdepths:aridrock",
   "ore_tags": [
-    "c:ores_in_ground/limestone"
+    "c:ores_in_ground/aridrock"
   ]
 }

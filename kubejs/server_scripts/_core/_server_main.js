@@ -33,7 +33,6 @@ ServerEvents.tags('entity_type', e => {
 })
 
 ServerEvents.tags('worldgen/biome', e => {
-    biomeTags_Core(e)
     biomeTags_Atmospheric(e)
     biomeTags_Autumnity(e)
     // biomeTags_CallOfYucutan(e)
@@ -51,7 +50,8 @@ ServerEvents.tags('worldgen/biome', e => {
     biomeTags_BountifulFares(e)
     biomeTags_Oreganized(e)
 
-    // nml changes need to load way later
+    // these changes need to load way later
+    biomeTags_Core(e)
     biomeTags_NoMansLand(e)
 })
 
@@ -150,6 +150,7 @@ ServerEvents.generateData('after_mods', e => {
     worldgen_FarmersDelight(e)
     worldgen_BountifulFares(e)
     worldgen_NoMansLand(e)
+    worldgen_ArtsAndCrafts(e)
 
     structures_Core(e)
 })

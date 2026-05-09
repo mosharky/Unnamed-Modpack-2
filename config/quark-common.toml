@@ -1646,7 +1646,7 @@
 	"Overlay Shader" = false
 	"Spawner Replacer" = false
 	#Allows placing variant blocks automatically via a selector menu triggered from a keybind
-	"Variant Selector" = false
+	"Variant Selector" = true
 	"Villager Rerolling Rework" = true
 
 	[experimental.adjustable_chat]
@@ -1730,11 +1730,11 @@
 		"Enable Green Tint" = true
 		"Override Held Item Render" = true
 		"Hud Offset X" = 0
-		"Hud Offset Y" = 0
+		"Hud Offset Y" = 50
 		#When true, selector arrow will render in same style as crosshair
 		"Render Like Cross Hair" = true
 		#Uses smaller arrow icon for variant selector overlay
-		"Smaller Arrow" = false
+		"Smaller Arrow" = true
 
 		[experimental.variant_selector.variants]
 			#The list of all variant types available for players to use. Values are treated as suffixes to block IDs for scanning.

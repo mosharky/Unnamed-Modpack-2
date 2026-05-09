@@ -68,6 +68,7 @@ mapwright_maps/
 notepad/
 fieldguide_cache/
 .sable/
+debug/
 
 # root files
 knownkeys.txt

@@ -87,43 +87,7 @@ function biomeTags_Core(e) {
         'natures_spirit:boreal_taiga',
     ])
 
-    // TODO more sparse maple tree biomes
-    e.add('kubejs:has_feature/sparse_maple_tree', [
-        'minecraft:forest',
-        'minecraft:windswept_forest',
-        'minecraft:flower_forest'
-    ])
-    e.add('kubejs:has_feature/spotted_maple_tree/orange', [
-        'minecraft:dark_forest',
-        'windswept:chestnut_forest',
-        'windswept:snowy_chestnut_forest'
-    ])
-    e.add('kubejs:has_feature/spotted_maple_tree/red', [
-        'minecraft:taiga',
-        'minecraft:windswept_forest',
-        'windswept:pine_barrens',
-        'windswept:snowy_pine_barrens'
-    ])
-    e.add('kubejs:has_feature/spotted_maple_tree/yellow', [
-
-    ])
-    e.add('kubejs:has_feature/stone_cliff', [
-        'natures_spirit:blooming_sugi_forest',
-        'natures_spirit:boreal_taiga',
-        'natures_spirit:fir_forest',
-        'natures_spirit:oak_savanna',
-        'natures_spirit:snowy_fir_forest',
-        'natures_spirit:sugi_forest',
-        'natures_spirit:tundra',
-        'natures_spirit:windswept_sugi_forest',
-        'minecraft:cherry_grove',
-        'minecraft:grove',
-        'minecraft:meadow',
-        'minecraft:snowy_slopes',
-        'minecraft:windswept_forest',
-        'minecraft:windswept_gravelly_hills',
-        'minecraft:windswept_hills',
-    ])
+    e.add('kubejs:has_feature/stone_cliff', '#kubejs:classic_soil')
     e.add('kubejs:has_feature/terracotta_cliff', [
         'natures_spirit:bamboo_wetlands',
         'minecraft:bamboo_jungle',
@@ -143,6 +107,40 @@ function biomeTags_Core(e) {
         'minecraft:birch_forest',
         'minecraft:old_growth_birch_forest',
         'windswept:chestnut_forest',
+    ])
+
+    e.add('kubejs:classic_soil', e.get('minecraft:is_overworld').getObjectIds())
+    e.remove('kubejs:classic_soil', [
+        // from https://github.com/Alchemists-Of-Yore/No-Mans-Land/1.21.1/src/main/resources/data/nomansland/tags/worldgen/biome/classic_soil.json
+        'minecraft:mushroom_fields',
+        'minecraft:frozen_peaks',
+        e.get('minecraft:is_ocean').getObjectIds(),
+        e.get('minecraft:is_river').getObjectIds(),
+        e.get('c:is_desert').getObjectIds(),
+        e.get('c:is_cave').getObjectIds(),
+        e.get('c:is_badlands').getObjectIds(),
+        e.get('minecraft:is_nether').getObjectIds(),
+        e.get('minecraft:is_end').getObjectIds(),
+        // my filters
+        'atmospheric:rainforest_basin',
+        'atmospheric:sparse_rainforest_basin',
+        'natures_spirit:tropical_basin',
+        'natures_spirit:tundra',
+        'natures_spirit:white_cliffs',
+        'natures_spirit:marsh',
+        'natures_spirit:wooded_drylands',
+        'natures_spirit:red_peaks',
+        'natures_spirit:snowcapped_red_peaks',
+        'natures_spirit:arid_highlands',
+        'minecraft:swamp',
+        'minecraft:mangrove_swamp',
+        e.get('c:is_mountain/peak').getObjectIds(),
+        e.get('kubejs:has_feature/andesite_cliff').getObjectIds(),
+        e.get('kubejs:has_feature/granite_cliff').getObjectIds(),
+        e.get('kubejs:has_feature/terracotta_cliff').getObjectIds(),
+        e.get('kubejs:has_feature/travertine_cliff').getObjectIds(),
+        e.get('kubejs:has_feature/kaolin_cliff').getObjectIds(),
+        e.get('kubejs:has_feature/chert_cliff').getObjectIds(),
     ])
 
     // Vanilla Backport

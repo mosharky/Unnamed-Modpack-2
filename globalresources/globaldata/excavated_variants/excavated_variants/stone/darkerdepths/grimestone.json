@@ -3,10 +3,10 @@
     "excavated_variants:overworld"
   ],
   "translations": {
-    "en_us": "Crimsite"
+    "en_us": "Grimestone"
   },
-  "block": "create:crimsite",
+  "block": "darkerdepths:grimestone",
   "ore_tags": [
-    "c:ores_in_ground/crimsite"
+    "c:ores_in_ground/grimestone"
   ]
 }

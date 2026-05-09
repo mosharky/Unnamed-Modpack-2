@@ -1,0 +1,12 @@
+{
+  "types": [
+    "excavated_variants:overworld"
+  ],
+  "translations": {
+    "en_us": "Darkslate"
+  },
+  "block": "darkerdepths:darkslate",
+  "ore_tags": [
+    "c:ores_in_ground/darkslate"
+  ]
+}
