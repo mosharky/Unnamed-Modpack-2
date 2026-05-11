@@ -28,7 +28,6 @@ config/minecraft-cursor.json
 config/flywheel-client.toml
 config/c2me.toml
 config/minecraft-cursor.json
-config/c2me.toml
 config/flywheel-client.toml
 
 # mods
@@ -39,8 +38,8 @@ config/flywheel-client.toml
 # mods/*.disabled
 
 # resourcepacks
-resourcepacks/*.zip
-!resourcepacks/special-*
+# resourcepacks/*.zip
+# !resourcepacks/special-*
 
 # shaderpacks
 shaderpacks/*.zip
@@ -127,10 +126,10 @@ minecraftinstance.json
 .unsup-state.json
 .unsup-tmp/
 
-# kubejs loading
-kubejs/assets/*.zip
-!kubejs/assets/special-*.zip
-kubejs/data/*.zip
-!kubejs/data/special-*.zip
+# kubejs loading (RE-ENABLE WHEN PACKWIZZING)
+# kubejs/assets/*.zip
+# !kubejs/assets/special-*.zip
+# kubejs/data/*.zip
+# !kubejs/data/special-*.zip
 
 .probe
