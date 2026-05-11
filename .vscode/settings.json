@@ -107,24 +107,21 @@
         "config/c2me.toml": true,
         "**/mapwright_maps/": true,
         "**/imgui.ini": true,
-        "kubejs/data/*.zip": true,
+        "kubejs/data/*.zip": false,
         "kubejs/data/special-*.zip": false,
         "**/notepad/": true,
         "**/fieldguide_cache/": true,
         "**/.sable/": true,
-        "**/ponders_watched.json": true
+        "**/ponders_watched.json": true,
+        "mods/**/.index/": true,
+        "mods/**/.connector/": true,
+        "**/debug/": true
     },
     "typescript.tsserver.maxTsServerMemory": 4096,
     "typescript.disableAutomaticTypeAcquisition": true,
     "typescript.surveys.enabled": false,
     "typescript.validate.enable": false,
     "json.schemas": [
-        {
-            "fileMatch": [
-                "/recipe_schema/*.json"
-            ],
-            "url": "./.vscode/recipe.json"
-        },
         {
             "fileMatch": [
                 "/recipe_schema/*.json"
