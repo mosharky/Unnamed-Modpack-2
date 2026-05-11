@@ -47,39 +47,39 @@ shaderpacks/*.zip
 shaderpacks/*EuphoriaPatches*
 
 # root folders
-not-enough-crashes/
-crash-reports/
-screenshots/
-saves/
-logs/
-data/
-local/
-patchouli_books/
-schematics/
-XaeroWorldMap/
-XaeroWaypoints*/
-modernfix/
-worldicons/
-.lazyyyyy/
-cache/
-.cache/
-mod_data/
-.mixin.out/
-xaero/
-ESM/
-backups/
-Distant_Horizons_server_data/
-emojiful/
-dynamic-data-pack-cache/
-dynamic-resource-pack-cache/
-moddata/
-moonlight-global-datapacks/
-downloads/
-mapwright_maps/
-notepad/
-fieldguide_cache/
-.sable/
-debug/
+/not-enough-crashes/
+/crash-reports/
+/screenshots/
+/saves/
+/logs/
+/data/
+/local/
+/patchouli_books/
+/schematics/
+/XaeroWorldMap/
+/XaeroWaypoints*/
+/modernfix/
+/worldicons/
+/.lazyyyyy/
+/cache/
+/.cache/
+/mod_data/
+/.mixin.out/
+/xaero/
+/ESM/
+/backups/
+/Distant_Horizons_server_data/
+/emojiful/
+/dynamic-data-pack-cache/
+/dynamic-resource-pack-cache/
+/moddata/
+/moonlight-global-datapacks/
+/downloads/
+/mapwright_maps/
+/notepad/
+/fieldguide_cache/
+/.sable/
+/debug/
 
 # root files
 knownkeys.txt
@@ -110,21 +110,21 @@ imgui.ini
 ponders_watched.json
 
 # dev environment stuff
-.probe/
-.vscode/probe.code-snippets
-mod_data/__pycache__/
-mod_data/mod_data.log
-mod_data/generated/
+/.probe/
+/.vscode/probe.code-snippets
+/mod_data/__pycache__/
+/mod_data/mod_data.log
+/mod_data/generated/
 
 # launcher-related
 .curseclient
 icon.png
-server-resource-packs/
-coremods/
-texturepacks/
 minecraftinstance.json
 .unsup-state.json
-.unsup-tmp/
+/.unsup-tmp/
+/server-resource-packs/
+/coremods/
+/texturepacks/
 
 # kubejs loading (RE-ENABLE WHEN PACKWIZZING)
 # kubejs/assets/*.zip
