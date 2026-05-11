@@ -32,10 +32,11 @@ config/c2me.toml
 config/flywheel-client.toml
 
 # mods
-mods/.connector/
-mods/*.jar
-!mods/special-*
-mods/*.disabled
+# mods/.connector/
+# mods/.index/
+# mods/*.jar
+# !mods/special-*
+# mods/*.disabled
 
 # resourcepacks
 resourcepacks/*.zip
@@ -125,7 +126,6 @@ texturepacks/
 minecraftinstance.json
 .unsup-state.json
 .unsup-tmp/
-mods/.index/
 
 # kubejs loading
 kubejs/assets/*.zip
