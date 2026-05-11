@@ -8,11 +8,11 @@ RecipeViewerEvents.removeCategories(e => {
 })
 
 RecipeViewerEvents.addInformation('item', e => {
-    e.add('kubejs:ravager_hide', 'Obtained by killing a Ravager.')
+    // e.add('kubejs:ravager_hide', 'Obtained by killing a Ravager.')
     e.add('minersdelight:silverfish_eggs', 'Obtained by killing a Silverfish with a knife.')
 })
 
 ClientEvents.generateAssets('after_mods', e => {
-    clientData_EMI(e)
-    clientData_Quark(e)
+    // clientData_EMI(e)
+    // clientData_Quark(e)
 })

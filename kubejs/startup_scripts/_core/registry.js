@@ -8,11 +8,7 @@ Attack Speed: FA233E1C-4180-4865-B01B-BCCE9785ACA3
 */
 
 StartupEvents.registry('item', e => {
-    e.create('ravager_hide')
-        .displayName('Ravager Hide')
-        .maxStackSize(16)
-        .rarity('uncommon')
-        .texture('quark:item/ravager_hide')
+
 })
 
 /** @param {$ItemModificationKubeEvent} e */

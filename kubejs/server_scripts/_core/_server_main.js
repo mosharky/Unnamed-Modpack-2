@@ -7,7 +7,7 @@ ServerEvents.tags('item', e => {
 
     if (!global.DEBUG_MODE) {
         e.add('c:hidden_from_recipe_viewers', global.REMOVALS.arr.concat([
-            /excavated_variants:.*/,
+            // /excavated_variants:.*/,
         ]))
     }
 })
@@ -61,6 +61,7 @@ ServerEvents.tags('worldgen/structure', e => {
 
 
 ServerEvents.recipes(e => {
+    /*
     recipes_Core(e)
     // recipes_Aetherworks(e)
     // recipes_AlexsMobs(e)
@@ -87,6 +88,7 @@ ServerEvents.recipes(e => {
     recipes_Create(e)
     recipes_NoMansLand(e)
     recipes_Autumnity(e)
+    */
 
     // Fully removing any recipe tied to items in REMOVALS
     global.REMOVALS.set.forEach(removal => {
@@ -108,6 +110,7 @@ ServerEvents.loaded(e => {
 
 ServerEvents.generateData('after_mods', e => {
     // advancements_Core(e)
+    /*
 
     numismaticTrades_Core(e)
     moonlightTrades_Supplementaries(e)
@@ -153,30 +156,31 @@ ServerEvents.generateData('after_mods', e => {
     worldgen_ArtsAndCrafts(e)
 
     structures_Core(e)
+    */
 })
 
 LootJS.modifiers(e => {
     // Replacements
     const noBlocks = e.addTableModifier(/(?!.*:blocks\/).*/)
     const all = e.addTableModifier(/.*/)
-    lootReplacements_Core(noBlocks)
+    // lootReplacements_Core(noBlocks)
     // lootReplacements_ImmersiveEnchanting(all)
-    lootRemovals_EndRem(all)
-    lootRemovals_Environmental(all)
-    lootRemovals_NoMansLand(all)
+    // lootRemovals_EndRem(all)
+    // lootRemovals_Environmental(all)
+    // lootRemovals_NoMansLand(all)
 
-    lootTables_Core(e)
+    // lootTables_Core(e)
     // lootTables_EndRem(e)
     // lootTables_ImmersiveEnchanting(e)
-    lootTables_SootyChimneys(e)
+    // lootTables_SootyChimneys(e)
 })
 
 
 EntityEvents.spawned(e => {
-    entitySpawned_Core(e)
+    // entitySpawned_Core(e)
 })
 
 
 MoreJS.villagerTrades(e => {
-    villagerTrades_NumismaticOverhaul(e)
+    // villagerTrades_NumismaticOverhaul(e)
 })

@@ -4,10 +4,6 @@
  * @import {$ItemModificationKubeEvent} "dev.latvian.mods.kubejs.item.ItemModificationKubeEvent" 
 */
 
-const $WoodTypeRegistry = Java.loadClass('net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry')
-const $EveryCompat = Java.loadClass('net.mehvahdjukaar.every_compat.EveryCompat')
-const $ModEntriesConfigs = Java.loadClass('net.mehvahdjukaar.every_compat.configs.ModEntriesConfigs')
-
 global.WOOD_TYPES = {}
 global.DISABLED_WOOD_TYPES = {}
 global.ITEM_SWAPPER = new Map()

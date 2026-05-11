@@ -1,6 +1,6 @@
 // priority: -1
 
-Platform.setModName('kubejs', 'Momo Did This')
+Platform.setModName('kubejs', 'Yonder')
 // Platform.setModName('generikb', 'Momo Did This')
 Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
 // Platform.setModName('cataclysm', 'Cataclysm')
@@ -9,6 +9,7 @@ Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
 // Platform.setModName('raccompat', 'Relics: Alex\'s Caves')
 // Platform.setModName('ramcompat', 'Relics: Alex\'s Mobs')
 
+/*
 function postInit() {
     // console.log($WoodTypeRegistry.getTypes())
     // console.log($EveryCompat.getCompatMods())
@@ -115,3 +116,4 @@ ItemEvents.modification(e => {
     // itemModification_Respiteful(e)
     // itemModification_UnusualEnd(e)
 })
+*/

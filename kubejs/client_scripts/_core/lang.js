@@ -9,10 +9,11 @@ ClientEvents.lang('en_us', e => {
 
     // Farmer's Delight
     // TODO: this aint working
-    rename('farmersdelight:rope', 'Netting')
-    rename('farmersdelight:wheat_dough', 'Dough')
+    // rename('farmersdelight:rope', 'Netting')
+    // rename('farmersdelight:wheat_dough', 'Dough')
 
     // Nature's Spirit
+    /*
     rename('natures_spirit:lavender', 'Tall Lavender Bush')
     rename('natures_spirit:bluebell', 'Bluebell Bush')
     rename('natures_spirit:foxglove', 'Purple Foxglove')
@@ -21,6 +22,7 @@ ClientEvents.lang('en_us', e => {
     rename('natures_spirit:lotus_stem', 'Aquatic Lotus Stem')
     rename('natures_spirit:oat_grass', 'Dry Oat Grass')
     rename('natures_spirit:tall_oat_grass', 'Tall Dry Oat Grass')
+    */
 
     // Even Better Nether
     // rename('evenbetternether:barrel_cactus', 'Warped Barrel Cactus')
@@ -29,15 +31,15 @@ ClientEvents.lang('en_us', e => {
     // e.add('collectorsreap', 'item.collectorsreap.dragon_fruit_seeds', 'Pink Dragon Fruit Seeds')
 
     // Darker Depths
-    rename('darkerdepths:ash_block', 'Darkslate Ash Block')
-    rename('darkerdepths:ash', 'Darkslate Ash')
+    // rename('darkerdepths:ash_block', 'Darkslate Ash Block')
+    // rename('darkerdepths:ash', 'Darkslate Ash')
 
     // Doom and Gloom missing lang
     // e.add('doom_and_gloom', 'entity.doom_and_gloom.holler', 'Holler')
     // e.add('doom_and_gloom', 'entity.minecraft.villager.gravetender', 'Gravetender')
 
     // AE2 missing lang
-    e.add('ae2', 'entity.minecraft.villager.fluix_researcher', 'Fluix Researcher')
+    // e.add('ae2', 'entity.minecraft.villager.fluix_researcher', 'Fluix Researcher')
 
     // More Minecarts missing lang
     // rename('moreminecarts:maglev_hologram_rail', 'Maglev Holograph Rail')
@@ -45,13 +47,13 @@ ClientEvents.lang('en_us', e => {
     // rename('moreminecarts:hologram_rail', 'Holograph Rail')
 
     // Bountiful Fares
-    rename('bountifulfares:plum_log', 'Fruitful Plum Log')
-    rename('bountifulfares:plum_wood', 'Fruitful Plum Wood')
-    rename('bountifulfares:stripped_plum_log', 'Stripped Fruitful Plum Log')
-    rename('bountifulfares:stripped_plum_wood', 'Stripped Fruitful Plum Wood')
-    rename('bountifulfares:plum_leaves', 'Fruitful Plum Leaves')
-    rename('bountifulfares:plum_sapling', 'Fruitful Plum Sapling')
+    // rename('bountifulfares:plum_log', 'Fruitful Plum Log')
+    // rename('bountifulfares:plum_wood', 'Fruitful Plum Wood')
+    // rename('bountifulfares:stripped_plum_log', 'Stripped Fruitful Plum Log')
+    // rename('bountifulfares:stripped_plum_wood', 'Stripped Fruitful Plum Wood')
+    // rename('bountifulfares:plum_leaves', 'Fruitful Plum Leaves')
+    // rename('bountifulfares:plum_sapling', 'Fruitful Plum Sapling')
 
     // No Man's Land
-    rename('nomansland:oat_grass', 'Lush Oat Grass')
+    // rename('nomansland:oat_grass', 'Lush Oat Grass')
 })
