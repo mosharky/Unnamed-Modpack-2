@@ -113,7 +113,8 @@ ponders_watched.json
 
 # dev environment stuff
 /.probe/
-/.vscode/probe.code-snippets
+/.vscode/probejs.code-snippets
+/.github/agents/
 /py_scripts/__pycache__/
 /py_scripts/py_scripts.log
 /py_scripts/generated/
@@ -133,5 +134,3 @@ minecraftinstance.json
 # !kubejs/assets/special-*.zip
 # kubejs/data/*.zip
 # !kubejs/data/special-*.zip
-
-.probe

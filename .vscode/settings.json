@@ -108,17 +108,5 @@
         "py_scripts/py_scripts.log": false,
         "py_scripts/generated/": false
     },
-    "typescript.tsserver.maxTsServerMemory": 4096,
-    "typescript.disableAutomaticTypeAcquisition": true,
-    "typescript.surveys.enabled": false,
-    "typescript.validate.enable": false,
-    "json.schemas": [
-        {
-            "fileMatch": [
-                "/recipe_schema/*.json"
-            ],
-            "url": "./.vscode/recipe.json"
-        }
-    ],
     "editor.tabSize": 4
 }
