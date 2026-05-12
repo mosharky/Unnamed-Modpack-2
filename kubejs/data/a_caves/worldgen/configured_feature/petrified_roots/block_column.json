@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block_column",
+  "config": {
+    "layers": [
+      {
+        "height": {
+          "type": "minecraft:biased_to_bottom",
+          "min_inclusive": 1,
+          "max_inclusive": 3
+        },
+        "provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "darkerdepths:petrified_log",
+            "Properties": {
+              "persistent": "true"
+            }
+          }
+        }
+      }
+    ],
+    "direction": "down",
+    "allow_water": false,
+    "prioritize_tip": false,
+    "allowed_placement": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:air"
+      ]
+    },
+    "prioritized_tip": {
+      "type": "darkerdepths:petrified_log",
+      "blocks": [
+        "minecraft:air"
+      ]
+    }
+  }
+}

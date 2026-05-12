@@ -1,0 +1,10 @@
+{
+  "type": "lithostitched:composite",
+  "config": {
+    "features": [
+      "a_general:trees/oak/dying_checked",
+      "a_general:blocks/checked/leaf_pile"
+    ],
+    "placement_type": "never_cancel"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "lithostitched:weighted_selector",
+  "config": {
+    "features": [
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/1",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/2",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/3",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/4",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/5",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/6",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/7",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/oak/dying_variants/8",
+          "placement": []
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

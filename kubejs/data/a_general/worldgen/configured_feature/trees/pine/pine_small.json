@@ -1,0 +1,42 @@
+{
+  "type": "lithostitched:weighted_selector",
+  "config": {
+    "features": [
+      {
+        "data": {
+          "feature": "a_general:trees/pine/small_variants/1",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/pine/small_variants/2",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/pine/small_variants/3",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/pine/small_variants/4",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "a_general:trees/pine/small_variants/5",
+          "placement": []
+        },
+        "weight": 1
+      }
+    ]
+  }
+}
