@@ -31,6 +31,8 @@ config/minecraft-cursor.json
 config/flywheel-client.toml
 config/axiom/*
 config/sodium-options.json
+config/sodium-fingerprint.json
+config/fml.toml
 
 # mods
 # mods/.connector/
