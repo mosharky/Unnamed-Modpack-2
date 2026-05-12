@@ -6,30 +6,20 @@ function itemTags_Core(e) {
 
 /** @param {$TagKubeEvent} e */
 function blockTags_Core(e) {
-    e.add('snowrealmagic:containables', [
-    ])
-
-    // used for Panda's Falling Trees compat
-    e.add('kubejs:extra_tree_blocks_whitelist', [
-        /natures_spirit:.*wisteria_vines/
-    ])
-
     // Bountiful Fares mixins to make fruits able to grow on data-driven leaves
-    // e.add('yonder:can_hang_on/hoary_apple', [])
-    e.add('yonder:can_hang_on/walnut', 'nomansland:walnut_leaves')
+    e.add('yonder:can_hang_on/apple', ['#bountifulfares:apple_leaves'])
+    e.add('yonder:can_hang_on/golden_apple', ['#bountifulfares:golden_apple_leaves', '#bountifulfares:flowering_golden_apple_leaves'])
+    e.add('yonder:can_hang_on/hoary_apple', ['#bountifulfares:hoary_apple_leaves'])
+    e.add('yonder:can_hang_on/lemon', ['#bountifulfares:lemon_leaves'])
+    e.add('yonder:can_hang_on/orange', ['#bountifulfares:orange_leaves'])
+    e.add('yonder:can_hang_on/plum', ['#bountifulfares:plum_leaves'])
+    e.add('yonder:can_hang_on/walnut', ['nomansland:walnut_leaves'])
+    e.add('yonder:can_hang_on/withered_golden_apple', ['#bountifulfares:golden_apple_leaves', '#bountifulfares:flowering_golden_apple_leaves'])
 }
 
 /** @param {$TagKubeEvent} e */
 function entityTags_Core(e) {
-    // e.add('kubejs:surface_mod_entities', /.*surface:.*/)
-    e.add('c:bosses', [
-        'alexscaves:tremorzilla',
-        'alexscaves:hullbreaker',
-        'alexscaves:luxtructosaurus',
-        'alexscaves:gum_worm',
-        'alexscaves:forsaken',
-        'alexsmobs:void_worm',
-    ])
+    e.add('c:bosses', [])
 }
 
 
