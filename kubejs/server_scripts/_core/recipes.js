@@ -7,11 +7,11 @@ function recipes_Core(e) {
     e.replaceInput({}, '#c:doughs', '#c:foods/dough')
 
     // duplicates
-    e.remove({ id: 'minecraft:lodestone' })
-    e.remove({ id: 'vanillabackport:pumpkin_pie' })
-    e.remove({ id: 'minecraft:cake' })
-    e.remove({ id: 'neapolitan:cake' })
-    e.remove({ id: 'vanillabackport:cake' })
+    // e.remove({ id: 'minecraft:lodestone' })
+    // e.remove({ id: 'vanillabackport:pumpkin_pie' })
+    // e.remove({ id: 'minecraft:cake' })
+    // e.remove({ id: 'neapolitan:cake' })
+    // e.remove({ id: 'vanillabackport:cake' })
 
     // no more ez bread
     e.remove({ id: 'minecraft:bread' })
@@ -38,16 +38,4 @@ function recipes_Core(e) {
                 })
         }
     }
-
-    e.shaped('backpacked:backpack', [
-        'BCB',
-        'CEC',
-        'DAD'
-    ], {
-        A: 'kubejs:ravager_hide',
-        B: '#c:strings',
-        C: '#c:ingots/iron',
-        D: 'minecraft:leather',
-        E: '#c:chests/wooden'
-    }).id('backpacked:backpack')
 }

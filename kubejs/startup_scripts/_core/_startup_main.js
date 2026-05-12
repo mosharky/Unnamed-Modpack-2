@@ -1,13 +1,7 @@
 // priority: -1
 
 Platform.setModName('kubejs', 'Yonder')
-// Platform.setModName('generikb', 'Momo Did This')
 Platform.setModName('numismaticoverhaul', 'Numismatic Overhaul')
-// Platform.setModName('cataclysm', 'Cataclysm')
-// Platform.setModName('vanillabackport', 'Minecraft')
-// Platform.setModName('createarmory', 'Create: Armory')
-// Platform.setModName('raccompat', 'Relics: Alex\'s Caves')
-// Platform.setModName('ramcompat', 'Relics: Alex\'s Mobs')
 
 /*
 function postInit() {

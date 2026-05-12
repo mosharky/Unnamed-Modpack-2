@@ -7,7 +7,6 @@ function itemTags_Core(e) {
 /** @param {$TagKubeEvent} e */
 function blockTags_Core(e) {
     e.add('snowrealmagic:containables', [
-        // /geocluster:.*sample/
     ])
 
     // used for Panda's Falling Trees compat
@@ -15,43 +14,9 @@ function blockTags_Core(e) {
         /natures_spirit:.*wisteria_vines/
     ])
 
-    /*
-    e.add('generikb:magnetic_caves_blocks', [
-        'alexscaves:azure_neodymium_pillar',
-        'alexscaves:scarlet_neodymium_pillar',
-        'alexscaves:azure_neodymium_node',
-        'alexscaves:scarlet_neodymium_node',
-        'alexscaves:galena',
-        'alexscaves:galena_iron_ore',
-        'alexscaves:energized_galena_azure',
-        'alexscaves:energized_galena_scarlet',
-        'alexscaves:energized_galena_neutral',
-        'alexscaves:metal_swarf',
-        'alexscaves:galena_spire',
-        'alexscaves:tesla_bulb',
-        'create_new_age:magnetite_block',
-        'minecraft:bedrock',
-        'minecraft:lava'
-    ])
-    e.add('generikb:toxic_caves_blocks', [
-        'alexscaves:radrock',
-        'alexscaves:acidic_radrock',
-        'alexscaves:radrock_uranium_ore',
-        'alexscaves:underweed',
-        'alexscaves:sulfur',
-        'alexscaves:sulfur_bud_small',
-        'alexscaves:sulfur_bud_medium',
-        'alexscaves:sulfur_bud_large',
-        'alexscaves:sulfur_cluster',
-        'alexscaves:acid',
-        'minecraft:bedrock',
-        'minecraft:mud'
-    ])
-    */
-
     // Bountiful Fares mixins to make fruits able to grow on data-driven leaves
-    // e.add('nameless:can_hang_on/hoary_apple', [])
-    e.add('nameless:can_hang_on/walnut', 'nomansland:walnut_leaves')
+    // e.add('yonder:can_hang_on/hoary_apple', [])
+    e.add('yonder:can_hang_on/walnut', 'nomansland:walnut_leaves')
 }
 
 /** @param {$TagKubeEvent} e */
@@ -141,11 +106,6 @@ function biomeTags_Core(e) {
         e.get('kubejs:has_feature/travertine_cliff').getObjectIds(),
         e.get('kubejs:has_feature/kaolin_cliff').getObjectIds(),
         e.get('kubejs:has_feature/chert_cliff').getObjectIds(),
-    ])
-
-    // Vanilla Backport
-    e.add('minecraft:spawns_wildflowers', [
-        '#natures_spirit:is_autumn'
     ])
 }
 
