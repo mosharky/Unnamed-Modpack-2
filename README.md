@@ -5,6 +5,8 @@ Yonder is a WIP modpack!
 1. Use [Visual Studio Code](https://code.visualstudio.com/)! Here are some very helpful extensions:
     - [JSON to JS converter](https://marketplace.visualstudio.com/items?itemName=renatorodrigues.json-to-js) - Very handy for converting JSON data into a JS object
     - [ProbeJS](https://marketplace.visualstudio.com/items?itemName=Prunoideae.probejs) - Integrates VSCode with KubeJS/ProbeJS
+    - [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+    - [NBT Viewer](https://marketplace.visualstudio.com/items?itemName=Misodee.vscode-nbt)
 2. Get access to the `mods` subrepo ([YonderMods](https://github.com/mosharky/YonderMods)) from momo
 3. Clone this repo using:
 ```
