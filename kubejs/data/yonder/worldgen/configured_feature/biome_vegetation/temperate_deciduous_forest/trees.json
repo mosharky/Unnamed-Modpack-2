@@ -1,0 +1,49 @@
+{
+  "type": "lithostitched:weighted_selector",
+  "config": {
+    "features": [
+      {
+        "data": {
+          "feature": "yonder:trees/oak/oak_normal",
+          "placement": []
+        },
+        "weight": 10
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/maple/maple_normal",
+          "placement": []
+        },
+        "weight": 8
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/walnut_normal",
+          "placement": []
+        },
+        "weight": 5
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/apple/apple_normal",
+          "placement": []
+        },
+        "weight": 4
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/oak/oak_large",
+          "placement": []
+        },
+        "weight": 3
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/pine/pine_small",
+          "placement": []
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

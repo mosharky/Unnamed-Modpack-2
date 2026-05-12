@@ -1,0 +1,70 @@
+{
+  "type": "lithostitched:weighted_selector",
+  "config": {
+    "features": [
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/1",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/2",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/3",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/4",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/5",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/6",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/7",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/8",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:petrified_roots/giant/9",
+          "placement": []
+        },
+        "weight": 1
+      }
+    ]
+  }
+}

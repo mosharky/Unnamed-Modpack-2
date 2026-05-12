@@ -1,0 +1,92 @@
+{
+    "type": "minecraft:vegetation_patch",
+    "config": {
+        "surface": "floor",
+        "depth": {
+            "type": "minecraft:biased_to_bottom",
+            "min_inclusive": 2,
+            "max_inclusive": 4
+        },
+        "vertical_range": 1,
+        "extra_bottom_block_chance": 0.0075,
+        "extra_edge_column_chance": 0.5,
+        "vegetation_chance": 0.025,
+        "xz_radius": 7,
+        "replaceable": "#yonder:cave_floor_replaceable",
+        "ground_state": {
+            "type": "minecraft:noise_threshold_provider",
+            "seed": 12345,
+            "noise": {
+                "firstOctave": -2,
+                "amplitudes": [
+                    1.5
+                ]
+            },
+            "scale": 2,
+            "threshold": 0.3,
+            "high_chance": 0.2,
+            "default_state": {
+                "Name": "minecraft:dirt"
+            },
+            "low_states": [
+                {
+                    "Name": "minecraft:coarse_dirt"
+                }
+            ],
+            "high_states": [
+                {
+                    "Name": "minecraft:coarse_dirt"
+                }
+            ]
+        },
+        "vegetation_feature": {
+            "feature": {
+                "type": "minecraft:random_selector",
+                "config": {
+                    "features": [
+                        {
+                            "chance": 0.475,
+                            "feature": {
+                                "feature": "nomansland:underground/patch_cave_weeds",
+                                "placement": []
+                            }
+                        },
+                        {
+                            "chance": 0.225,
+                            "feature": {
+                                "feature": "abundant_atmosphere:patch_catsbane",
+                                "placement": []
+                            }
+                        },
+                        {
+                            "chance": 0.225,
+                            "feature": {
+                                "feature": "yonder:cave_crud",
+                                "placement": []
+                            }
+                        },
+                        {
+                            "chance": 0.125,
+                            "feature": {
+                                "feature": "yonder:boulder/cobbled_deepslate",
+                                "placement": []
+                            }
+                        },
+                        {
+                            "chance": 0.775,
+                            "feature": {
+                                "feature": "yonder:pebbles_dense",
+                                "placement": []
+                            }
+                        }
+                    ],
+                    "default": {
+                        "feature": "yonder:boulder/tuff_depths",
+                        "placement": []
+                    }
+                }
+            },
+            "placement": []
+        }
+    }
+}

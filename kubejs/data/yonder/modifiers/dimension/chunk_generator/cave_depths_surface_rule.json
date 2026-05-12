@@ -1,0 +1,26 @@
+{
+  "modifiers": [
+    {
+      "type": "surface_rule",
+      "config": {
+        "surface_rule": {
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:biome",
+            "biome_is": [
+              "yonder:cave_depths"
+            ]
+          },
+          "then_run": {
+            "type": "minecraft:block",
+            "result_state": {
+              "Name": "minecraft:deepslate"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "priority": "normal",
+  "selector": "minecraft:overworld"
+}

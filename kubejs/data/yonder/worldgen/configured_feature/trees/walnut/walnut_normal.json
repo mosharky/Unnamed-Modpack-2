@@ -1,0 +1,63 @@
+{
+  "type": "lithostitched:weighted_selector",
+  "config": {
+    "features": [
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/1",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/2",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/3",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/4",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/5",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/6",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/7",
+          "placement": []
+        },
+        "weight": 1
+      },
+      {
+        "data": {
+          "feature": "yonder:trees/walnut/normal_variants/8",
+          "placement": []
+        },
+        "weight": 1
+      }
+    ]
+  }
+}
