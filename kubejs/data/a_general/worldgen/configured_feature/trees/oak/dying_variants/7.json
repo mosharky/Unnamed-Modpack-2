@@ -9,7 +9,7 @@
     "can_leaves_place_filter": {
       "type": "minecraft:replaceable"
     },
-    "canopy_location": "a_general:features/trees/oak/normal/canopy_4",
+    "canopy_location": "a_general:features/trees/oak/normal/canopy_7",
     "decorators": [],
     "height": {
       "type": "minecraft:uniform",
@@ -21,7 +21,7 @@
       "entries": [
         {
           "data": {
-            "Name": "regions_unexplored:dead_leaves",
+            "Name": "yonder:dead_leaves",
             "Properties": {
               "distance": "7",
               "persistent": "false",

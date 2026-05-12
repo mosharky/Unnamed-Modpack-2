@@ -21,7 +21,7 @@
       "entries": [
         {
           "data": {
-            "Name": "regions_unexplored:dead_leaves",
+            "Name": "yonder:dead_leaves",
             "Properties": {
               "distance": "7",
               "persistent": "false",
