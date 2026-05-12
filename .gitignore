@@ -114,9 +114,9 @@ ponders_watched.json
 # dev environment stuff
 /.probe/
 /.vscode/probe.code-snippets
-/mod_data/__pycache__/
-/mod_data/mod_data.log
-/mod_data/generated/
+/py_scripts/__pycache__/
+/py_scripts/py_scripts.log
+/py_scripts/generated/
 
 # launcher-related
 .curseclient
