@@ -43,7 +43,7 @@
     "entityEffectRange": 24,
     "enableBowPull": true,
     "enableBreathEffect": true,
-    "enablePlayerToolbarEffect": true,
+    "enablePlayerToolbarEffect": false,
     "enableToolbarBlockSounds": false,
     "enableSwingEffect": true,
     "enableBrushStepEffect": true

@@ -29,6 +29,8 @@ config/flywheel-client.toml
 config/c2me.toml
 config/minecraft-cursor.json
 config/flywheel-client.toml
+config/axiom/*
+config/sodium-options.json
 
 # mods
 # mods/.connector/

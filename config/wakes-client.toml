@@ -9,7 +9,7 @@ mobBlacklist = []
 wakeResolution = "SIXTEEN"
 # Default: 1.0
 # Range: 0.0 ~ 1.0
-wakeOpacity = 1.0
+wakeOpacity = 0.5
 # Default: 0.5
 # Range: 0.0 ~ 1.0
 blendStrength = 0.5
