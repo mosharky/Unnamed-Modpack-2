@@ -2,6 +2,10 @@
 function itemTags_Core(e) {
     e.removeAllTagsFrom(global.REMOVALS.arr)
     e.add('kubejs:disabled', global.REMOVALS.arr)
+    
+    e.add('minecraft:leaves', [
+        'yonder:dead_leaves',
+    ])
 }
 
 /** @param {$TagKubeEvent} e */
@@ -15,6 +19,10 @@ function blockTags_Core(e) {
     e.add('yonder:can_hang_on/plum', ['#bountifulfares:plum_leaves'])
     e.add('yonder:can_hang_on/walnut', ['nomansland:walnut_leaves'])
     e.add('yonder:can_hang_on/withered_golden_apple', ['#bountifulfares:golden_apple_leaves', '#bountifulfares:flowering_golden_apple_leaves'])
+
+    e.add('minecraft:leaves', [
+        'yonder:dead_leaves',
+    ])
 }
 
 /** @param {$TagKubeEvent} e */
