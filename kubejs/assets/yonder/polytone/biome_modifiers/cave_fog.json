@@ -1,0 +1,8 @@
+{
+    "targets": [
+        "#c:is_underground",
+        "yonder:caves"
+    ],
+    "fog_radius": 0.35,
+    "fog_fade": 10.5
+}
