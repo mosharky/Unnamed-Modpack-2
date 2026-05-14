@@ -21,7 +21,8 @@
 		"soundEvent": "minecraft:block.note_block.chime"
 	},
 	"mentionKeywords": [
-		"@mo_mods"
+		"@mo_mods",
+		"@Officer_Gruude"
 	],
 	"ignoreSystemChats": true,
 	"enableChatSoundCooldown": false,
