@@ -20,7 +20,7 @@
         "config/asyncparticles/asyncparticles-mixin.properties": true,
         "config/packetfixer.properties": true,
         "config/structurify/*backup*": true,
-        "kubejs/config/probe-settings.json": true,
+        "kubejs/config/probe-settings.json": false,
         "kubejs/config/web_server.json": true,
         "config/oculus.properties": true,
         "config/ftbqoptimizer.snbt": true,
@@ -106,7 +106,11 @@
         "config/sodium-options.json": true,
         "py_scripts/__pycache__/": true,
         "py_scripts/py_scripts.log": false,
-        "py_scripts/generated/": false
+        "py_scripts/generated/": true,
+        "config/sodium-fingerprint.json": true,
+        "config/fml.toml": false,
+        ".vscode/probejs.code-snippets": true,
+        ".github/agents/": false
     },
     "editor.tabSize": 4
 }

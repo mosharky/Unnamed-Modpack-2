@@ -16,8 +16,6 @@ config/everycomp-hazardous.properties
 config/asyncparticles/asyncparticles-mixin.properties
 config/packetfixer.properties
 config/structurify/*backup*
-kubejs/config/probe-settings.json
-kubejs/config/web_server.json
 config/oculus.properties
 config/ftbqoptimizer.snbt
 config/ftbxmodcompat.snbt
@@ -116,6 +114,7 @@ ponders_watched.json
 # dev environment stuff
 /.probe/
 /.vscode/probejs.code-snippets
+/kubejs/config/web_server.json
 /.github/agents/
 /py_scripts/__pycache__/
 /py_scripts/py_scripts.log

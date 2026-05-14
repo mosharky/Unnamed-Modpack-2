@@ -1,0 +1,15 @@
+{
+    "probejs.hintsForLLM": true,
+    "probejs.generateBeans": true,
+    "probejs.fullScanMods": [
+        "minecraft",
+        "kubejs",
+        "neoforge",
+        "morejs",
+        "lootjs",
+        "kubejstweaks",
+        "kubejs_create",
+        "kubejsdelight"
+    ],
+    "probejs.complete": true
+}
