@@ -26,7 +26,7 @@ ServerEvents.commandRegistry(event => {
             let player = ctx.source.getPlayer()
 
             player.tell(Text.gold('Starting biome checks. The server will lag momentarily...'))
-            overworldBiomes.forEach(biome => {
+            OVERWORLD_BIOMES.forEach(biome => {
                 if (!player.runCommandSilent(`locate biome ${biome}`)) {
                     player.tell([Text.red('COULD NOT FIND BIOME: '), Text.gray(biome)])
                     console.log(`COULD NOT FIND BIOME: ${biome}`)

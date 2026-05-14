@@ -1,8 +1,9 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_Autumnity(e) {
     // Disable all Autumnity biomes
-    e.json('autumnity:blueprint/modded_biome_slices/autumn', disableBiomeSliceJson)
+    disableBlueprintBiome(e, 'autumnity:autumn')
 
+    /*
     addFeatures(e,
         copyPasteFeature(e, 'autumnity', PLACED, 'autumnity:patch_foul_berry_bush'),
         '#kubejs:has_feature/autumnity_foul_berry_bush',
@@ -167,4 +168,5 @@ function worldgen_Autumnity(e) {
             wouldSurvive('natures_spirit:orange_maple_sapling')
         ]
     })
+    */
 }

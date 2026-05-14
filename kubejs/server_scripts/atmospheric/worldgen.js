@@ -1,9 +1,15 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_Atmospheric(e) {
 
-    // Disable Aspen Parkland biome
-    e.json('atmospheric:blueprint/modded_biome_slices/aspen', disableBiomeSliceJson)
+    // Disable all biomes
+    disableBlueprintBiome(e, 'atmospheric:aspen')
+    disableBlueprintBiome(e, 'atmospheric:dunes_and_scrubland')
+    disableBlueprintBiome(e, 'atmospheric:kousa')
+    disableBlueprintBiome(e, 'atmospheric:laurel')
+    disableBlueprintBiome(e, 'atmospheric:rainforest')
+    disableBlueprintBiome(e, 'atmospheric:spiny_thicket')
 
+    /*
     removeFeatures(e, [
         'atmospheric:patch_waterlily_rainforest_basin',
         'atmospheric:patch_waterlily_rainforest'
@@ -73,4 +79,5 @@ function worldgen_Atmospheric(e) {
         removeFeatures(e, 'atmospheric:coarse_dirt', 'atmospheric:spiny_thicket', VEGETAL_DECORATION)
         removeFeatures(e, 'atmospheric:coarse_dirt_laurel_forest', 'atmospheric:laurel_forest', VEGETAL_DECORATION)
     }
+    */
 }

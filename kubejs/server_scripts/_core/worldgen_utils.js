@@ -41,28 +41,6 @@ const FLUID_SPRINGS = 'fluid_springs'
 const VEGETAL_DECORATION = 'vegetal_decoration'
 const TOP_LAYER_MODIFICATION = 'top_layer_modification'
 
-const disableBiomeSliceJson = {
-    levels: ['minecraft:overworld'],
-    weight: 0,
-    provider: {
-        type: "blueprint:multi_noise",
-        areas: { 'environmental:marsh_area': "environmental:marsh" },
-        biomes: [{ // Not sure if this field is needed but whatever
-            biome: 'blueprint:original_source_marker',
-            parameters: {
-                continentalness: [1.0, 1.1],
-                depth: 0.0,
-                erosion: [-1.0, 1.0],
-                humidity: [-1.0, 1.0],
-                offset: 0.0,
-                temperature: [-1.0, 1.0],
-                weirdness: [-1.0, 1.0]
-            }
-        }],
-        only_map_from_areas: true
-    }
-}
-
 
 /**
  * Processes string into an ID for a feature
@@ -406,4 +384,29 @@ function registerCliff(event, block, count, xzMin, xzMax, yMin, yMax, toReplaceA
     registerFeature(event, PLACED, featureId, placedJson)
 
     return featureId
+}
+
+function disableBlueprintBiome(e, biomeSlice) {
+    const split = biomeSlice.split(':')
+    e.json(`${split[0]}:blueprint/modded_biome_slices/${split[1]}`, {
+        levels: ['minecraft:overworld'],
+        weight: 0,
+        provider: {
+            type: "blueprint:multi_noise",
+            areas: { 'environmental:marsh_area': "environmental:marsh" },
+            biomes: [{ // Not sure if this field is needed but whatever
+                biome: 'blueprint:original_source_marker',
+                parameters: {
+                    continentalness: [1.0, 1.1],
+                    depth: 0.0,
+                    erosion: [-1.0, 1.0],
+                    humidity: [-1.0, 1.0],
+                    offset: 0.0,
+                    temperature: [-1.0, 1.0],
+                    weirdness: [-1.0, 1.0]
+                }
+            }],
+            only_map_from_areas: true
+        }
+    })
 }

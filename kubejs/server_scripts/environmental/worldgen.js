@@ -1,9 +1,12 @@
 /** @param {$KubeDataGenerator} e  */
 function worldgen_Environmental(e) {
-    // Disable Marsh and Pine biome
-    e.json('environmental:blueprint/modded_biome_slices/marsh', disableBiomeSliceJson)
-    // e.json('environmental:blueprint/modded_biome_slices/pine_barrens', disableBiomeSliceJson)
 
+    // Disable all biomes
+    disableBlueprintBiome(e, 'environmental:blossom')
+    disableBlueprintBiome(e, 'environmental:marsh')
+    disableBlueprintBiome(e, 'environmental:pine_barrens')
+
+    /*
     // Disable biome modifiers
     removeBiomeModifier(e, 'environmental:add_feature/cattails')
     removeBiomeModifier(e, 'environmental:remove_feature/swamp_oak')  // not sure if this is even needed
@@ -68,4 +71,5 @@ function worldgen_Environmental(e) {
 
         registerFeature(e, CONFIGURED, tree, treeJson)
     })
+    */
 }

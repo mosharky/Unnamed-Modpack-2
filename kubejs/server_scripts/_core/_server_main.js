@@ -84,20 +84,22 @@ ServerEvents.loaded(e => {
     e.server.gameRules.set('decorative_blocks:disableThatch', true)
     e.server.persistentData.gameRules = true
 })
-
+   
 ServerEvents.generateData('after_mods', e => {
-    // advancements_Core(e)
+    worldgen_Core(e)
+    worldgen_Atmospheric(e)
+    worldgen_Autumnity(e)
+    worldgen_Environmental(e)
+    worldgen_Neapolitan(e)
+
     /*
+    advancements_Core(e)
 
     numismaticTrades_Core(e)
     moonlightTrades_Supplementaries(e)
     moonlightTrades_Sawmill(e)
 
-    worldgen_Core(e)
-    worldgen_Atmospheric(e)
-    worldgen_Autumnity(e)
-    // worldgen_CavernsAndChasms(e)
-    worldgen_Environmental(e)
+    worldgen_CavernsAndChasms(e)
     worldgen_Galosphere(e)
     worldgen_MyNethersDelight(e)
     worldgen_NaturesSpirit(e)

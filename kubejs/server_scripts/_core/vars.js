@@ -15,9 +15,9 @@
 // Loading classes
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 
-let overworldBiomes
+let OVERWORLD_BIOMES
 ServerEvents.tags('worldgen/biome', e => {
-    overworldBiomes = e.get('minecraft:is_overworld').getObjectIds()
+    OVERWORLD_BIOMES = e.get('minecraft:is_overworld').getObjectIds()
 })
 
 // Numismatic Overhaul stuff shortened
