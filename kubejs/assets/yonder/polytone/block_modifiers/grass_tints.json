@@ -1,0 +1,10 @@
+{
+  "targets": [
+    "minecraft:grass_block"
+  ],
+  "colormap": {
+    "0": "yonder:dirt_color",
+    "2": "minecraft:grass_color"
+  },
+  "tinted_breaking_particles": true
+}

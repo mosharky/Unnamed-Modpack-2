@@ -1,0 +1,14 @@
+{
+  "targets": [
+    "minecraft:dirt",
+    "minecraft:rooted_dirt",
+    "minecraft:coarse_dirt",
+    "minecraft:mycelium",
+    "minecraft:farmland",
+    "minecraft:dirt_path"
+  ],
+  "colormap": {
+    "0": "yonder:dirt_color"
+  },
+  "tinted_breaking_particles": true
+}

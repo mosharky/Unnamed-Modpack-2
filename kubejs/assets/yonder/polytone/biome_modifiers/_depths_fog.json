@@ -1,0 +1,7 @@
+{
+    "targets": [
+        "yonder:cave_depths"
+    ],
+    "fog_radius": 0.25,
+    "fog_fade": 12.0
+}

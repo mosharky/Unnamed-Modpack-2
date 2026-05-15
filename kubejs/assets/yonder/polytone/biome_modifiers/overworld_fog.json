@@ -1,0 +1,6 @@
+{
+    "targets": [
+        "#minecraft:is_overworld"
+    ],
+    "fog_fade": 10.5
+}
