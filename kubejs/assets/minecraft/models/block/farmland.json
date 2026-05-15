@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/tint_farmland",
+  "textures": {
+    "particle": "block/dirt_gray",
+    "overlay": "block/pebbles",
+    "overlay_side": "block/pebbles_farmland",
+    "side": "block/farmland_side_gray",
+    "dirt": "minecraft:block/dirt_gray",
+    "top": "minecraft:block/farmland_gray"
+  }
+}

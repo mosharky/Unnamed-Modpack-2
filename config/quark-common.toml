@@ -767,7 +767,7 @@
 	"Glimmering Weald" = false
 	"Monster Box" = true
 	"Nether Obsidian Spikes" = false
-	"New Stone Types" = true
+	"New Stone Types" = false
 	"No More Lava Pockets" = false
 	Permafrost = false
 	"Spiral Spires" = true
