@@ -259,13 +259,13 @@
     "volcanoBiomeUsage": 0.85,
     "naturalSnowDecorator": true,
     "customBiomeFeatures": false,
-    "vanillaSprings": true,
+    "vanillaSprings": false,
     "oreCompatibleStoneOnly": false,
     "erosionDecorator": false,
     "plainStoneErosion": false,
-    "smoothLayerDecorator": false,
-    "strataRegionSize": 684,
-    "strataDecorator": false
+    "smoothLayerDecorator": true,
+    "strataRegionSize": 1000,
+    "strataDecorator": true
   },
   "terrain": {
     "torridonian": {
@@ -277,13 +277,13 @@
     "mountains": {
       "weight": 5.0,
       "baseScale": 1.2,
-      "verticalScale": 1.0,
+      "verticalScale": 1.1026498,
       "horizontalScale": 1.0
     },
     "volcano": {
       "weight": 5.0,
       "baseScale": 1.0,
-      "verticalScale": 1.0,
+      "verticalScale": 1.1026498,
       "horizontalScale": 1.0
     },
     "plateau": {
@@ -299,7 +299,7 @@
       "horizontalScale": 1.0
     },
     "plains": {
-      "weight": 2.0,
+      "weight": 0.0,
       "baseScale": 1.0,
       "verticalScale": 1.0,
       "horizontalScale": 1.0
@@ -319,12 +319,13 @@
     "general": {
       "globalHorizontalScale": 1.2,
       "fancyMountains": true,
+      "legacyMountainScaling": false,
       "terrainSeedOffset": 0,
       "terrainRegionSize": 1400,
       "globalVerticalScale": 1.0
     },
     "steppe": {
-      "weight": 1.5,
+      "weight": 0.0,
       "baseScale": 1.0,
       "verticalScale": 1.0,
       "horizontalScale": 1.0
@@ -367,7 +368,7 @@
   },
   "world": {
     "continent": {
-      "continentSkipping": 0.0,
+      "continentSkipping": 0.5152203,
       "continentType": "MULTI_IMPROVED",
       "continentScale": 3000,
       "continentJitter": 0.8
@@ -381,14 +382,14 @@
     },
     "properties": {
       "seaLevel": 63,
-      "spawnType": "CONTINENT_CENTER",
-      "worldHeight": 320
+      "spawnType": "WORLD_ORIGIN",
+      "worldHeight": 512
     }
   },
   "surface": {
     "erosion": {
       "dirtMin": 95,
-      "rockSteepness": 0.65,
+      "rockSteepness": 0.5990456,
       "dirtSteepness": 0.475,
       "screeSteepness": 0.4,
       "rockVariance": 30,
@@ -414,7 +415,7 @@
       "max": 1.0,
       "bias": 0.0,
       "seedOffset": 0,
-      "scale": 7,
+      "scale": 20,
       "falloff": 1
     },
     "moisture": {
@@ -422,7 +423,7 @@
       "max": 1.0,
       "bias": 0.0,
       "seedOffset": 0,
-      "scale": 6,
+      "scale": 20,
       "falloff": 1
     },
     "biomeShape": {
@@ -432,10 +433,10 @@
       "biomeWarpStrength": 80
     },
     "biomeEdgeShape": {
-      "gain": 0.5,
+      "gain": 0.5071531,
       "lacunarity": 2.65,
       "strength": 14,
-      "type": "SIMPLEX",
+      "type": "RIDGE",
       "scale": 24,
       "octaves": 2
     }
