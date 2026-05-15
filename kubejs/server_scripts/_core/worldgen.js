@@ -484,9 +484,15 @@ function worldgen_Core(e) {
         'zeta',
         'snowundertrees'
     ])
+    const loaded = new Set()
     biomeModifiersToRemove.forEach(modifier => {
-        const [namespace, id] = modifier.split(':')
-        if (!blacklist.has(namespace)) removeBiomeModifier(e, modifier)
+        const [mod, id] = modifier.split(':')
+        if (!loaded.has(mod) && Platform.isLoaded(mod)) {
+            loaded.add(mod)
+        }
+        if (loaded.has(mod) && !blacklist.has(mod)) {
+            removeBiomeModifier(e, modifier)
+        }
     })
 
     // removeFeatures(e, ['minecraft:spring_lava', 'minecraft:spring_lava_frozen'], '#minecraft:is_overworld', FLUID_SPRINGS)
