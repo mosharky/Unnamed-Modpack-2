@@ -24,7 +24,27 @@ function entityTags_Core(e) {
 
 /** @param {$TagKubeEvent} e */
 function biomeTags_Core(e) {
-    /*
+    e.add('kubejs:has_feature/stone_cliff', '#kubejs:classic_soil')
+    e.add('kubejs:has_feature/terracotta_cliff', [
+        'natures_spirit:bamboo_wetlands',
+        'minecraft:bamboo_jungle',
+        'minecraft:jungle',
+        'minecraft:sparse_jungle',
+    ])
+    e.add('kubejs:has_feature/andesite_cliff', [
+        '#natures_spirit:is_alpine',
+        'natures_spirit:heather_fields',
+        'natures_spirit:prairie',
+        '#windswept:is_pine_barrens',
+    ])
+    e.add('kubejs:has_feature/granite_cliff', [
+        'natures_spirit:golden_wilds',
+        'natures_spirit:maple_woodlands',
+        'natures_spirit:marigold_meadows',
+        'minecraft:birch_forest',
+        'minecraft:old_growth_birch_forest',
+        'windswept:chestnut_forest',
+    ])
     e.add('kubejs:classic_soil', e.get('minecraft:is_overworld').getObjectIds())
     e.remove('kubejs:classic_soil', [
         // from https://github.com/Alchemists-Of-Yore/No-Mans-Land/1.21.1/src/main/resources/data/nomansland/tags/worldgen/biome/classic_soil.json
@@ -40,25 +60,16 @@ function biomeTags_Core(e) {
         // my filters
         'atmospheric:rainforest_basin',
         'atmospheric:sparse_rainforest_basin',
-        'natures_spirit:tropical_basin',
-        'natures_spirit:tundra',
-        'natures_spirit:white_cliffs',
-        'natures_spirit:marsh',
-        'natures_spirit:wooded_drylands',
-        'natures_spirit:red_peaks',
-        'natures_spirit:snowcapped_red_peaks',
-        'natures_spirit:arid_highlands',
         'minecraft:swamp',
         'minecraft:mangrove_swamp',
         e.get('c:is_mountain/peak').getObjectIds(),
         e.get('kubejs:has_feature/andesite_cliff').getObjectIds(),
         e.get('kubejs:has_feature/granite_cliff').getObjectIds(),
         e.get('kubejs:has_feature/terracotta_cliff').getObjectIds(),
-        e.get('kubejs:has_feature/travertine_cliff').getObjectIds(),
-        e.get('kubejs:has_feature/kaolin_cliff').getObjectIds(),
-        e.get('kubejs:has_feature/chert_cliff').getObjectIds(),
+        // e.get('kubejs:has_feature/travertine_cliff').getObjectIds(),
+        // e.get('kubejs:has_feature/kaolin_cliff').getObjectIds(),
+        // e.get('kubejs:has_feature/chert_cliff').getObjectIds(),
     ])
-    */
 }
 
 
